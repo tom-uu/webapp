@@ -1,0 +1,173 @@
+#textReaderView > div{
+    padding:8px;
+    background-color:#FFF;
+    margin-bottom: 15px;
+}
+#textReaderView > div > div.text-reader {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 8px;
+    border: 1px solid #ddd;
+    margin: 0;
+    background: transparent;
+    color: #2b2b2b;
+    font: 13px/1.35 Helvetica, arial, sans-serif;
+    cursor: text;
+    outline: none;
+    word-wrap: break-word;
+}
+#textReaderView > div{
+    font-size:1.0625rem;
+}
+#textReaderView > div > div.text-reader p{
+    font-size:1.0625rem;
+    margin: 0 0 0.5em;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+#textReaderView > div > div.text-reader ul{
+    font-size:1.0625rem;
+}
+#textReaderView > div a {
+    text-decoration: underline;
+}
+#textReaderView > div h1{
+    padding: 5px 0 13px 0;
+    margin-bottom: 10px;
+    border-bottom: solid 1px #eee;
+    text-align: center;
+}
+#textReaderView > div h1,#textReaderView > div h2,#textReaderView > div h3{
+    border-top:0;
+}
+#textReaderView > div h3{
+    color: #2b2b2b;
+}
+#textReaderView > div h2,#textReaderView > div h3{
+    padding:5px 0;
+    margin-bottom:0.5em;
+}
+#textReaderView > div h4,#textReaderView > div h5,#textReaderView > div h6 {
+    margin: 0;
+}
+#textReaderView > div ul,#textReaderView > div ol {
+    margin: 0 1em;
+    padding: 0 1em;
+}
+#textReaderView > div blockquote {
+    border-left: 2px solid blue;
+    margin: 0;
+    padding: 0 10px;
+}
+#textReaderView > div pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    padding: 7px 10px;
+    background: #f6f6f6;
+    font-family: menlo, consolas, monospace;
+    font-size: 90%;  
+}
+#textReaderView > div code {
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    padding: 1px 3px;
+    background: #f6f6f6;
+    font-family: menlo, consolas, monospace;
+    font-size: 90%;
+}
+#textReaderView > div.section_content_tag{
+    min-height:200px;
+}
+#textReaderView > div.section_content_tag > ul,
+#textReaderView > div.section_content_tag > ul ul{
+    list-style: none;
+    margin:0;
+    padding: 0 0 0 0.5em;
+}
+#textReaderView > div.section_content_tag > ul li{
+    margin: 5px;
+}
+#textReaderView > div.section_content_tag > ul > li > ul{
+    padding-left:15px;
+}
+#textReaderView > div > div.text-reader p img{
+    max-width:100%;
+    height:auto;
+}
+#textReaderView > div.section_content_tag{
+    max-height:calc(100% - 40px);
+    overflow-y:scroll;
+}
+#textReaderView > div.section_content_tag::-webkit-scrollbar{
+    display: none;
+}
+#textReaderView > div.section_content_tag > ul a{
+    text-decoration:none;
+}
+#textReaderView > div.change-page{
+    position: fixed;
+    margin-bottom:0;
+    background: rgba(0,0,0,0.05);
+    border-radius: 5px;
+    cursor: pointer;
+}
+#textReaderView > div.change-page.left,
+#textReaderView > div.change-page.right{
+    bottom: calc(50% - 20px);
+}
+#textReaderView > div.change-page.left{
+    left: 1px;
+}
+#textReaderView > div.change-page.right{
+    right: 1px;
+}
+#textReaderView > div.change-page > a{
+    position:relative;
+}
+#textReaderView > div.change-page.right > a{
+    left:6px;
+}
+#textReaderView > div.change-page.num-input{
+    height: 40px;
+    width: 40px;
+    left: calc(50% - 20px);
+    border-radius: 100%;
+    bottom: 15px;
+}
+#textReaderView > div.change-page:hover{
+    background: rgba(0,0,0,0.1);
+}
+#textReaderView > div.change-page:hover > a > span{
+    border-color:#000;
+}
+
+@media (max-width:767px){
+    #textReaderView > div > div.text-reader audio{
+        width:100%;
+    }
+    #textReaderView > div > div.text-reader{
+        min-height:500px;
+    }
+}
+@media (min-width:768px){
+    #textReaderView > div.section_content_item{
+        width: calc(70% - 15px);
+    }
+    #textReaderView > div.section_content_tag{
+        width: 30%;
+    }
+    #textReaderView > div.section_content_tag.tag-scroll{
+        width: calc(30% - 18px);
+    }
+    #textReaderView > div > div.text-reader{
+        min-height:505px;
+    }
+    #textReaderView > div > div.text-reader audio{
+        width:50%;
+    }
+}
+

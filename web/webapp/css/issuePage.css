@@ -1,0 +1,409 @@
+.issue-content-suspend-top{
+    top:140px;
+}
+.section_content > div > div > div > span{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 12px;
+}
+#issue-list-view > section{
+    padding-top: 10px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px dotted #999;
+}
+#issue-list-view > section:last-child{
+    margin: 0;
+    border: none;
+    padding-bottom: 0;
+}
+#issue-list-view > section > header{
+    padding-left:61px;
+    min-height: 58px;
+}
+#issue-list-view > section > header > h3{
+    width:calc(100% - 22px);
+}
+#issue-list-view > section > header > a.issue-edit-trigger{
+    position: absolute;
+    top:0;
+    right:0;
+    font-size: 13px;
+}
+#issue-list-view > section > header > .issue-docTotal-view{
+    top:0;
+    left:0;
+    background-color: #f6f6f6;
+}
+#issue-list-view > section > header > .issue-docTotal-view > a > span{
+    text-align: center;
+    color:#333;
+}
+#issue-list-view > section > header > .issue-docTotal-view > a > span.num{
+    position: relative;
+    top: -1px;
+    height: 20px;
+    font-size: 14px;
+    display:block;
+}
+#issue-list-view > section > header > div.issue-tagItem-view > ul > li{
+    margin: 0 8px 0 0;
+}
+#issue-list-view > section > header > div.issue-tagItem-view > a{
+    position:absolute;
+    right:0;
+    color:#666;
+    font-size:13px;
+}
+#issue-list-view > section > div.issue-doc-view{
+    padding: 10px;
+    background-color:#f8f8f8;
+    overflow: hidden;
+    color:#555;
+}
+#issue-list-view > section > div.issue-doc-view > div{
+    cursor:pointer;
+}
+
+#issue-list-view > section > div.issue-doc-view > div:hover{
+    color:#333;
+}
+#issue-list-view > section > div.issue-doc-view > div > h3{
+    margin-bottom: 5px;
+}
+#issue-list-view > section > div.issue-doc-view > div > p{
+    font-size:1rem;
+    word-wrap: break-word;
+}
+#issue-list-view > section > div.issue-doc-view > div > p:last-child{
+    font-size:13px;
+    margin-top:10px;
+    text-align:right;
+}
+#issue-list-view > section > div.issue-doc-view > div > p:last-child > span:last-child{
+    margin-left:5px;
+}
+#issue-list-view > section > div.issue-doc-view > div > p:last-child > span.audio-tip{
+    margin-right: 24px;
+}
+#issue-list-view > section > div.issue-doc-view > div > p:last-child > span.audio-tip > .icon{
+    font-size:15px;
+}
+#issue-list-view > section > div.issue-bottom-view{
+    overflow:hidden;
+    clear:both;
+}
+#issue-list-view > section > div.issue-bottom-view > .issue-time-view > .icon-clock-s{
+    margin-right:5px;
+}
+#issue-list-view > section > div.issue-bottom-view > span{
+    float:left;
+    display:block;
+}
+#issue-list-view > section > div.issue-bottom-view > .issue-time-view{
+    font-size: 13px;
+    margin-right: 10px;
+}
+#issue-list-view > section > div.issue-bottom-view{
+    margin-top:7px;
+}
+#issue-list-view > section > div.issue-bottom-view > a.issue-status-tag{
+    display: block;
+    float: left;
+    margin-left:10px;
+    font-size:13px;
+}
+#issue-list-view > section > div.issue-bottom-view > a.issue-status-tag.icon{
+    font-size:1.2em;
+}
+#issue-list-view > section > div.issue-bottom-view > .issue-docBtn-view{
+    float:right;
+    text-align: right;
+}
+#issue-list-view > section > div.issue-bottom-view > .issue-docBtn-view > a{
+    position:relative;
+    margin-left:20px;
+    font-size:13px;
+}
+#issue-list-view > section > div.issue-bottom-view > .issue-docBtn-view > a.issue-delete-trigger{
+    top:-1px;
+}
+#issue-list-view > div.issue-display-emptyItem{
+    padding:8px 0;
+    height:510px;
+    background-color:#f8f8f8;
+    font-size:10rem;
+    color:#999;
+    text-align:center;
+}
+#issue-list-view > div.issue-display-emptyItem > .icon{
+    position:absolute;
+    top:calc(50% - 30px);
+    left:calc(50% - 80px);
+}
+#issue-list-view > div.issue-display-emptyItem > h3{
+    position:absolute;
+    width:calc(100% - 100px);
+    top:calc(50% + 90px);
+    left:50px;
+    border-top:1px solid #ccc;
+    padding-top:20px;
+    text-align: center;
+}
+#issue-tag-view > div.issue-condition-view > div.time-calendar-view{
+    border-bottom:1px dotted #999; 
+    padding-bottom: 10px;
+}
+.section_content > div > div > div > div > div:first-child {
+    height: 24px;
+}
+#issue-info-view > div > div > div:first-child > a, #issue-info-view > div > div > div:first-child > span {
+    position: relative;
+    float: left;
+}
+
+.section_content > div > div > div > div > div + div {
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+#issue-info-view > div > div > div + div > div {
+    position: relative;
+    float: left;
+    margin-right: 20px;
+}
+
+#issue-info-view > div > div > div + div > div {
+    position: relative;
+    float: left;
+    margin-right: 20px;
+}
+
+.section_content > div > div > div.issue-list > div > span {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 12px;
+}
+#issue-edit-view > div > span:first-child{
+    margin:1px 10px 0 0;
+    float: left;
+}
+#issue-edit-view > div+div > ul{
+    padding: 0;
+    margin:0;
+    float: left;
+    list-style: none;
+}
+#issue-edit-view > div > textarea{
+    width:calc(100% - 70px);
+    height:75px;
+    float:left;
+    font-size:0.9rem;
+    margin:2px 0 0 2px;
+    border: 1px solid #ccc;
+    -webkit-appearance: none;
+    resize:none;
+}
+#issue-edit-view > div:last-child{
+    border-top:1px dotted #999;
+    padding-top: 8px;
+}
+#issue-edit-view > div:last-child > span{
+    float:right;
+    margin:0;
+}
+#issue-edit-view > div:last-child > span > a{
+    font-size:12px;
+    margin-left:12px;
+}
+#issue-content-view > div > div:last-child.section_content_tag .tag_content > ul,
+#issue-content-view > div > div:last-child.section_content_tag .status_select > ul,
+#issue-content-view > div > div:last-child.section_content_tag .time_select > ul{
+    list-style: none;
+}
+#issue-content-view > div > div:last-child.section_content_tag .tag_content > ul > li > div.empty-class-tip{
+    height:290px;
+    background-color:#f8f8f8;
+    color:#999;
+}
+#issue-content-view > div > div:last-child.section_content_tag .tag_content > ul > li > div.empty-class-tip > .icon{
+    position:absolute;
+    font-size:6rem;
+    top:calc(50% - 20px);
+    left:calc(50% - 48px);
+}
+#issue-content-view > div > div:last-child.section_content_tag .tag_content > ul > li > div.empty-class-tip > h3{
+    position: absolute;
+    width: calc(100% - 50px);
+    top: calc(50% + 60px);
+    left: 25px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+    text-align: center;
+}
+#issue-content-view > div > div:last-child.section_content_tag .time_select {
+    margin-top: 0;
+}
+#issue-content-view > div > div:last-child.section_content_tag .tag_content > ul.cls-select-list{
+    padding-top: 5px;
+}
+#issue-content-view > div > div:last-child.section_content_tag .status_select > ul.status-select-list{
+    margin-top:10px;
+}
+#issue-content-view > div > div:last-child.section_content_tag .date-time > ul{
+    margin:0;
+    padding: 5px 0;
+    list-style: none;
+    overflow: hidden;
+}
+#issue-content-view > div > div:last-child.section_content_tag .date-time > ul > li{
+    margin-right: 15px;
+    float:left;
+}
+#issue-content-view > div > div:last-child.section_content_tag .date-time > ul > li > input{
+    border: 1px solid #ccc;
+    padding: 2px 0;
+}
+#issue-content-view > div > div div.issue-search-view > input.issue-search-input{
+    width:100%;
+    border-radius: 0;
+    padding: 10px 15px;
+    text-transform: none;
+    border: 1px solid #ccc;
+    -webkit-appearance: none;
+    font-size:15px;
+}
+#issue-content-view > div > div:last-child.section_content_tag > div.freqCls-classify-view > div:first-child > .count-common,
+#issue-content-view > div > div:last-child.section_content_tag > div.topCls-classify-view > div:first-child > .count-top-tag{
+    font-size:12px;
+    margin-left:12px;
+    color:#999;
+}
+#issue-content-view > div > div:last-child.section_content_tag > div.topCls-classify-view > div > ul.topCls-display-list li{
+    clear:left;
+}
+#issue-content-view > div > div:last-child.section_content_tag > div.topCls-classify-view > div > ul.topCls-display-list > li{
+    width: 100%;
+    margin: 5px 0;
+}
+#issue-content-view > div > div:last-child.section_content_tag > div.topCls-classify-view > div > ul.topCls-display-list > li > span > a > span:last-child{
+    font-size: 12px;
+    margin-left: 15px;
+    color:#999;
+}
+#issue-content-view > div > div:last-child.section_content_tag > div.topCls-classify-view > div > ul.topCls-display-list li ul{
+    padding-left: 20px;
+    list-style: none;
+}
+#issue-content-view > div > div:last-child.section_content_tag > div.topCls-classify-view > div > ul.topCls-display-list > li > span{
+    padding-left: 20px;
+}
+#issue-content-view > div > div:last-child.section_content_tag > div.topCls-classify-view > div > ul.topCls-display-list li > span{
+    display: block;
+    cursor: pointer;
+}
+#issue-content-view > div > div:last-child.section_content_tag > div.topCls-classify-view > div > ul.topCls-display-list li > span:hover,
+#issue-content-view > div > div:last-child.section_content_tag > div.topCls-classify-view > div > ul.topCls-display-list li > span.selected_color{
+    background-color: #f3f3f3;
+}
+#issue-content-view > div > div:last-child.section_content_tag > div.topCls-classify-view > div > ul.topCls-display-list > li > span:hover > a:first-child,
+#issue-content-view > div > div:last-child.section_content_tag > div.topCls-classify-view > div > ul.topCls-display-list > li > ul > li > span:hover > a{
+    color:#000;
+}
+#issue-content-view > div > div:last-child.section_content_tag > div.topCls-classify-view > div > ul.topCls-display-list > li > span > a{
+    position: relative;
+    left: -19px;
+}
+#issue-content-view > div > div:last-child.section_content_tag > div.topCls-classify-view > div > ul.topCls-display-list > li > ul{
+    display: none;
+}
+#issue-content-view > div > div:last-child.section_content_tag > div.topCls-classify-view > div > ul.topCls-display-list > li.show > ul{
+    display:block !important;
+}
+#issue-content-view > div > div:last-child.section_content_tag > div.topCls-classify-view > div > ul.topCls-display-list > li > ul li > span > input{
+    position:relative;
+    top:2px;
+}
+#issue-content-view > div > div:last-child.section_content_tag > div.topCls-classify-view > div > .topCls-select-check,
+#issue-content-view > div > div:last-child.section_content_tag > div.freqCls-classify-view > div >.freqCls-select-check{
+    position: absolute;
+    top: 1px;
+    right:0;
+    font-size: 12px;
+}
+#issue-content-view > div > div:last-child.section_content_tag > div.topCls-classify-view > div > .topCls-select-check > input,
+#issue-content-view > div > div:last-child.section_content_tag > div.freqCls-classify-view > div >.freqCls-select-check > input{
+    position: relative;
+    top:2px;
+    margin: 0 2px;
+}
+#issue-content-view > div > div:last-child.section_content_tag > div.issue-condition-view > div.tag_content > ul.status-select-list > li > input{
+    position: relative;
+    top:2px;
+    margin:5px 5px 5px 0;
+}
+#issue-content-view > div > div:last-child.section_content_tag > div.issue-condition-view > div.tag_content > ul.cls-select-list > li.all-class{
+    border: none;
+}
+#issue-content-view > div > div:last-child.section_content_tag .time-select-list > li,
+#issue-content-view > div > div:last-child.section_content_tag .status-select-list > li{
+    cursor:pointer;
+}
+#issue-content-view > div > div:last-child.section_content_tag .status-select-list > li:hover{
+    color:#000;
+}
+#issue-edit-view .issue-edit-topCls,#issue-edit-view .issue-edit-subClsList{
+    float: left;
+    margin: 0 6px 0 2px;
+    position: relative;
+}
+#issue-edit-view ul{
+    margin:0;
+}
+#issue-content-view ul.delete-style > li {
+    position: relative;
+    float:left;
+    border: 1px solid #666;
+    margin:6px 12px 0 0;
+}
+#issue-content-view ul.delete-style > li > a{
+    margin:0 5px;
+}
+#issue-edit-view ul.issue-edit-status > li{
+    margin-top:1px;
+}
+#issue-edit-view > .tag-item-view > span{
+    margin-top:5px;
+}
+#issue-content-view > div > div:last-child.section_content_tag ul > li.selected {
+    border: 1px dashed #666;
+    margin:4px;
+}
+#issue-content-view > div > div:last-child.section_content_tag ul > li > a{
+    margin:0 2px;
+}
+#issue-content-view > div > div:last-child.section_content_tag .solid_border{
+    border:1px dashed #777 !important;
+}
+#issue-content-view > div > div:last-child.section_content_tag > div.issue-condition-view > div.tag_content{
+    border-top:1px dotted #999;
+}
+#issue-content-view > div > div:last-child.section_content_tag > div.issue-condition-view > div.status_select{
+    border-top:1px dotted #999;
+}
+@media (min-width:768px){
+    .sk-spinner-pulse.docList-loading{
+        position: fixed;
+        top: calc(50% - 3em);
+        left: calc(34% - 42px);
+    }	
+}
+@media (max-width:767px){
+    .sk-spinner-pulse.docList-loading{
+        position: fixed;
+        top: calc(50% - 3em);
+        left: calc(50% - 3em);
+    }
+}

@@ -1,0 +1,64 @@
+<script type="text/javascript" src="/webapp/script/view/doc.js"></script>
+<div id="doc-view" class="section_content_box hide">
+    <div id="doc-tab-view" class="section-content-tab"> 
+        <div class="tab-back-view hide"><a class="tab-back-trigger icon-btn"><span class="icon-chevron-left-l"></span></a></div>
+        <div class="tab-title-view center-text"><label class="tab-title-text"></label></div>
+        <a class="tab-add-trigger plus icon-btn"><span class="icon-plus-l"></span></a>
+        <a class="tab-ok-trigger hide"><i class="icon">&#xe813;</i></a>
+        <a class="tab-more-trigger k-line hide"><span class="line"></span><span class="line"></span><span class="line"></span></a>
+        <div class="tab-more-btns hide"><div><a class="export-trigger"><i class="icon">&#xe830;</i><span>导出</span></a></div><div><a class="edit-trigger"><i class="icon">&#xe832;</i><span>编辑</span></a></div></div>
+    </div>
+    <div id="doc-content-view" class="section_content">
+        <div>
+            <div id="doc-info-view" class="section_content_item left_content">
+                <div id="doc-list-view" class="doc-list">
+                    <section class="doc-item-template">			
+                        <header>
+                            <div class="doc-tagItem-view tag_view">
+                                <ul class="doc-tagItem-list"><li class="tag_icon"><a class="icon">&#xe83d;</a></li><li><a>未归档</a></li><li class="tag_icon sub_icon hide"><a class="icon icon-docs">&#xf0c5;</a></li></ul>
+                                <a class="doc-edit-trigger icon">&#xe832;</a>
+                            </div>
+                        </header>
+                        <div class="doc-view"></div>
+                        <div class="doc-bottom-view">
+                            <span class="doc-time-view"><span class="edit-time-tip">创建于</span><span class="doc-display-timeText"></span></span>
+                            <span class="doc-docBtn-view"><a class="doc-delete-trigger icon">&#xe83b;</a></span>	
+                        </div>	
+                    </section>
+                   <div class="doc-display-emptyItem tip_item"><i class="icon">&#xf0f6;</i><h3>未发现文档</h3></div>
+                </div>
+                <div id="doc-pageBar-view" class="paging hide">
+                    <ul>
+                        <li class="page-head-container page-turning-pre hide"><a class="page-head-trigger">首页</a><a class="page-pre-trigger">上页</a></li>
+                        <li class="page-num-container page-num"></li>
+                        <li class="page-tail-container page-turning-next hide"><a class="page-next-trigger">下页</a><a class="page-tail-trigger">尾页</a></li>
+                        <li class="page-total-view">共<span class="page-totalItem-text">0</span>项&nbsp;&nbsp;共<span class="page-totalPage-text">0</span>页</li>
+                        <li class="page-jump"><span>到<input class="page-jumpTo-inputNum"/>页</span></li>
+                        <li><a class="page-jumpTo-submit">翻页</a></li>
+                    </ul>					
+                </div>
+            </div>
+            <div id="doc-dimensions-view" class="section_content_tag right_content">
+                <div class="doc-search-view hide">
+                    <input type="text" class="doc-search-input" placeholder="搜索文档..."/>
+                </div>
+                <div class="doc-condition-view hide">
+                    <div><h4>查询</h4><a class="triggerBtn">显示</a></div>
+                    <div class="time-calendar-view date-time">
+                        <ul class="dateTime-display-list"><li>起始<input type="date"/></li><li>截止<input type="date"/></li></ul>
+                    </div>
+                    <div class="time_select" style="padding-bottom:2px"><ul class="time-select-list"><li><input type="radio" name="time" value="0" checked=""><span>创建日期</span></li><li><input type="radio" name="time" value="1"><span>修改日期</span></li></ul></div>
+                    <div class="tag_content"><ul class="cls-select-list delete-style"><li class="all-class" data-id="all">所有目录</li><li data-id="all"><a></a><a class="class_delete_btn icon-btn"><span class="icon-delete-s"></span></a></li></ul></div>
+                </div>
+                <div class="freqCls-classify-view hide">
+                    <div><h4>常用组</h4><a class="class-view-trigger icon">&#xf0c5;</a><span class="count-common"></span><span class="freqCls-select-check">多选<input type="checkbox"></span></div>
+                    <div class="tag_content"><ul class="freqCls-display-list"></ul></div>
+                </div>
+                <div class="topCls-classify-view">
+                    <div><h4>目录</h4><a class="class-view-trigger icon">&#xe83d;</a><span class="count-folder"></span><span class="topCls-select-check hide">多选<input type="checkbox"></span></div>
+                    <div class="tag_content"><ul class="topCls-display-list"><li><div class="empty-class-tip"><i class="icon">&#xe83d;</i><h3>未发现目录</h3></div></li></ul></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

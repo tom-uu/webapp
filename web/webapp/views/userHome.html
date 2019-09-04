@@ -1,0 +1,195 @@
+<html>
+<head>
+<link type="text/css" href="/conception/css/infoSection.css" rel="stylesheet" />
+<link type="text/css" href="/conception/css/userPage.css" rel="stylesheet" />
+<script type="text/javascript">
+	(function(){		
+		var components = new Array();
+		components.push(new Array());
+		components.push(new Object());
+		components.push(document.getElementById('userContentBox'));
+		components.push(["My","MyArticle","MySystem","MyCollect","MyInfo"]);		
+		components.push(function (lastSelectObj,nowSelectObj,tabIndex){
+			if(removeClass(lastSelectObj,"current")==0 && addClass(nowSelectObj,"current")==1 && tabIndex !== 0){
+				components[1].flag = false;
+			}
+		});
+		components.push(function (contentObj,tabIndex){
+			if(components[0][tabIndex] == null){
+				components[0][tabIndex] = document.createDocumentFragment();
+			}
+			while(contentObj.firstChild){
+				components[0][tabIndex].appendChild(contentObj.firstChild);	
+			}					
+		});
+		components.push(function (loadData){
+			var userHeadData = loadData["userHead"];
+			var userHeadObj = components[2].children[0];
+			for(var i in userHeadData){
+				switch(i){
+					case 'alias':						 
+						userHeadObj.children[1].children[0].children[0].innerText = userHeadData[i];
+						break;
+					case 'gender':
+						var genderText = userHeadData[i] === '0' ? '男' : '女';
+						userHeadObj.children[1].children[1].children[0].innerText = genderText;
+						break;
+					case 'motto':
+						userHeadObj.children[1].children[2].children[0].innerText = userHeadData[i];
+						break;
+				}
+			}
+			alert(loadData["userTrends"]);
+		});
+		components[1].flag = true;
+		for(var i=0;i<components[2].children[1].getElementsByTagName('a').length;i++){
+			components[0][i] = null;
+			components[2].children[1].getElementsByTagName('a')[i].addEventListener("click",function(e){
+				if(!hasClass(this,"current")){
+					var nameIndex = getNumFromVarName(this.id)-1;
+					var clickedTabItem = components[2].children[1].getElementsByClassName("current");
+					var lastSelectIndex = getNumFromVarName(clickedTabItem[0].id)-1;
+					var contentLoadFlag = false;
+					var nowSelect = this;					
+					if(components[0][nameIndex] !== null){
+						components[5](components[2].children[2],lastSelectIndex);						
+						components[2].children[2].appendChild(components[0][nameIndex]);
+						components[4](clickedTabItem[0],nowSelect,nameIndex);
+					}
+					else{
+						components[0][nameIndex] = document.createDocumentFragment();
+						var reqSubDir = nameIndex === 0 ? "" : "my_actions/"; 
+						requestServer("POST","/conception/controllers/"+reqSubDir+components[3][nameIndex]+"Action.php/loadView",null,function(resText){
+							if(resText){
+								var resObj = JSON.parse(resText);
+								var elementsDiv = document.createElement('div');
+								elementsDiv.innerHTML = resObj["html"];
+								if(components[2].children[2].children.length > 0){
+									components[5](components[2].children[2],lastSelectIndex);		
+								}							
+								components[2].children[2].innerHTML = elementsDiv.innerHTML;
+								var reqApp = components[7].excCode(components[2].children[2].getElementsByTagName('script')[0].innerText);
+								if(nameIndex === 4){
+									var headObjs = new Object();
+									headObjs = {
+										alias : components[2].children[0].children[1].children[0].children[0],
+										gender : components[2].children[0].children[1].children[1].children[0],
+										motto : components[2].children[0].children[1].children[2].children[0]
+									};
+									reqApp.registerComponent(headObjs);
+									for(var i in headObjs){
+										resObj["pageData"][i] = headObjs[i].innerText;
+									}									
+								}
+								reqApp.loadData(resObj["pageData"]);
+								components[4](clickedTabItem[0],nowSelect,nameIndex);
+							}						
+						});	
+					}	
+				}												
+			},false);
+		}				
+		
+		sectionTouchFun(components[2].children[2],components[1]);
+		
+		components[2].children[2].style.minHeight = window.innerHeight-215+'px';
+		
+		components.push(new BaseComponent());
+		
+		var app = new BaseComponent();
+		
+		app.getScrollLabelBar = function(){
+			var labelBarInfo = new Object();
+			labelBarInfo.labelArr = new Array();
+			labelBarInfo.labelArr.push(components[2].children[1]);
+			labelBarInfo.toggleLen = new Object();
+			labelBarInfo.toggleLen.smallWin = components[2].children[0].offsetHeight+components[2].offsetTop;
+			labelBarInfo.toggleLen.bigWin = components[2].children[0].offsetHeight;
+			labelBarInfo.content = new Object();
+			labelBarInfo.content.obj = components[2].children[2];
+			labelBarInfo.content.contentSuspendCls = 'user-content-suspend-top';
+			/*var sheetObj = getSheetObj("userPage.css");
+			if(sheetObj !== null){
+				alert(sheetObj);
+				insertRule(getSheetObj("userPage.css"),".content-suspend-top","top:"+(components[2].children[2].offsetTop-components[2].children[1].offsetTop)+'px',12);
+			}*/
+			return labelBarInfo;
+		};
+		
+		app.getComponentCount = function(){
+			return components.length;
+		};
+		
+		app.registerComponent = function(component){
+			if(typeof component == "object"){
+				components.push(component);
+			}
+		};
+		app.loadData = function(loadData){
+			components[6](loadData);
+		};
+		return app;
+	})();	
+</script>
+</head>
+<body>
+<div id="userContentBox" class="section_content_box">
+	<div id="userHead" class="user_head">
+		<div><img class="user_pic" src="images/user_default.jpg" title="编辑头像"/></div>
+		<div>
+			<div><h2></h2></div>
+			<div><span></span><span>精进</span></div>
+			<div><span></span></div>
+		</div>	
+	</div>
+	<div id="userTab" class="section_content_tab">
+		<div>
+			<table>
+				<tr>
+					<td><a id="userTabItem1" class="current">动态</a></td>
+					<td><a id="userTabItem2" >文章</a></td>
+					<td><a id="userTabItem3" >体系</a></td>
+					<td><a id="userTabItem4" >收藏</a></td>
+					<td><a id="userTabItem5" >资料</a></td>
+				</tr>
+			</table>
+		</div>			
+	</div>
+	<div id="userContent" class="section_content">
+		<div>
+			<div class="section_content_item left_content">
+			<div>			
+				<div><a></a></div>			
+				<div>
+					<div><span class="icon-clock-s"></span><span></span></div>
+					<div><i class="icon">&#xe827;</i><a></a></div>				
+				</div>
+				<div class="entry_item_bar">
+					<a class="icon-btn"><span class="icon-comment-s"></span><span></span></a>
+					<a class="icon-btn"><span class="icon-task-s"></span><span></span></a>		
+					<a class="icon-btn"><span class="icon-book-s"></span><span></span></a>
+					<a><i class="icon light_color">&#xf14b;</i><span></span></a>
+				</div>
+				<div style="display:none;"></div>
+			</div>
+			</div>
+			<div class="section_content_tag right_content">
+			<div>
+				<div><label><span class="icon-task-s"></span></label><span>新任务</span></div>
+				<div><a></a></div>	
+			</div>
+			<div>
+				<div><i class="icon light_color">&#xf29c;</i><span>新问题</span></div>
+			</div>
+			<div>
+				<div><label><span class="icon-book-s"></span></label><span>正在阅读</span></div>
+			</div>
+			<div>
+				<div><label><span class="icon-degree-s"></span></label><span>待测试</span></div>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

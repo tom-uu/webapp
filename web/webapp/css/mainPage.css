@@ -1,0 +1,932 @@
+@CHARSET "UTF-8";
+html,body{
+    height:100%;
+}
+body{	
+    font: 90%/160% Arial, Helvetica, sans-serif;
+    color: #444;
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: none;/*避免字体随横竖屏幕大小而变化;设置窗体固定高度也可以达到同样的效果;2017.10.8.16:42写;*/
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    overflow-y: auto;/*safari上的滑动缓慢问题没有解决;2017.10.11.11:46写*//*不加这个属性的话，则滚动起来速度不够，很迟钝，体验不好,在safari上尤其明显;2017.10.8.21:04写*/
+}
+/*能使body彻底禁止滑动，不产生橡皮筋效果;2017.10.11.14:07写*/
+body.noscroll{
+    overflow-y: hidden;
+}
+body.matchWinHeight{
+    height:100%;
+}
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+ul.block-style{
+    list-style: none;
+}
+ul.block-style li{
+    display: inline-block;
+}
+div,ul {
+    -webkit-touch-callout: none;
+}
+.un_select_text{
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+}
+.nav_container{
+    display: block;
+    position: relative;
+    transition: transform 0.3s ease 0s;
+}
+.user_container .user_photo{
+    width:40px;
+    height:40px;
+    border-radius: 10%;
+}
+.user_container > div > div.user_list{
+    width: 72px;
+    height: 70px;
+    right: 0;
+    top: 51px;
+    z-index: 11;	
+}
+.user_container > div > div.user_list > a{
+    text-align:left;
+    font-size:14px;
+}
+.user_container > div > div.user_list > a.icon-btn{
+    position: relative;
+    top:10px;
+}
+.user_container > div > div.user_list > a.icon-btn > span:first-child{
+    top:6px;
+    left: 2px;
+}
+.user_container > div > div.user_list > a.icon-btn > span:last-child{
+    margin-left: 12px;
+}
+.nav_header{
+    backface-visibility: hidden;
+    display: block;
+    text-align:center;
+}
+.nav_header::after, .navbar-collapse::after{
+    content: " ";
+    display: table;
+}
+.navbar-toggle {
+    position: absolute;
+    background-color:transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    left:8px;
+    top:9px;
+    padding: 7px;
+    cursor: pointer;
+    overflow: visible;
+    z-index: 100;
+}
+.navbar-toggle:hover{
+    background-color: #efefef;
+}
+.navbar-toggle .icon-bar + .icon-bar {/*需要添加此属性使每个<span>保持一定的距离，一共三个，这样看起来就像天卦符号了2017.7.28.23:04写*/
+    margin-top: 4px;
+}
+.navbar-toggle .icon-bar {/*这里是参照Creative Company的设计；这里的设计很有特色，采用三个<span>来拼接模拟成列表标签2017.7.28.22:52写*/
+    background-color: #888;
+    border-radius: 1px;
+    display: block;
+    height: 2px;
+    width: 22px;
+}
+.sr-only {
+    border: 0 none;
+    clip: rect(0px, 0px, 0px, 0px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+[aria-label="site navigation"]{
+    margin-right:1ch;
+    font-size:24px;
+}
+.nav_header .headTitleContainer
+{  
+    position: relative;
+    border: 0 none;
+    height:49px;
+    text-shadow: 3px 3px 3px #cccccc;
+    outline: medium none;
+}
+.nav_header .headTitleContainer span{
+    position: relative;
+    top:12px;
+    text-shadow: 3px 3px 3px #cccccc;
+    color:#666;
+    font-family: serif;;
+    font-size: 24px;   
+}
+.nav_header > .viewname{
+    position:absolute;
+    top:13px;
+    left:52px;
+    font-size:16px;
+    color:#555;
+}
+.nav_header .headTitleContainer label > .icon{
+	font-size: 23.5px; 
+}
+p {
+	margin: 0;
+}
+a {
+	text-decoration: none;
+}
+h1 {
+	font-size: 1.3rem;
+	color: #000;
+}
+h2 {
+	font-size: 1.2rem;
+	border-top: solid 1px #eee;
+	padding-top: 20px;
+}
+h3 {
+	font-size: 1.1rem;
+        color:#444;
+}
+.nav {
+    display: block;
+    clear:both;
+    min-height: 50px;
+    z-index: 100;
+    transition: padding 0.4s ease 0s;
+    border-bottom: 1px solid #efefef;
+}
+.navbar-nav{
+    position: static;
+    margin: 0;
+    padding: 0;
+    background: transparent none repeat scroll 0 0;
+    overflow:auto;
+    right: 0;
+    top: 0;
+    font-size: 1rem;
+    visibility: visible;
+    list-style: outside none none;
+    z-index: 1;
+    color:#666;
+}
+.navbar-nav li.item {
+    display:block;
+    position:relative;
+}
+.navbar-nav li a {
+    text-decoration: none;
+    border-bottom: medium none;
+    line-height: 16px;/*为了使字体水平对齐，发现使用px单位比em更能达到效果;2017.12.1.18:02*//*由1改为1em；与icon一致；2017.8.8.16:47写*/
+    padding:2px;/*由于新增了@font-face icon，为了看起来不会显得距离太远；缩小左右padding值,由padding: 0.3em 0.8em改为当前值；2017.8.8.16:46写*/
+    outline: medium none;
+    display: block;
+    position: relative;
+    margin:0 5px;/*由于每个项目文字右边都是图标；因此增大margin-right，以做选项区分；2017.8.8.16:58写*/
+}
+
+.navbar-nav ul{
+    list-style: outside none none;
+    padding:0;
+}
+
+.nav_container .list{/*原navbar-nav .list;2017.9.16.20:21写*/
+    position:absolute;	
+    background-color: rgba(255, 255, 255, 0.95);	
+    box-shadow: 0 0 5px #ccc;			
+}
+.navbar-nav .list{/*没有复杂的技术和数学边界计算，仅仅用最直接的方法就解决了问题----利用好函数自身的功能，缩减计算量，不要对功能切换与覆盖(li项之间mouseover与mouseout间的切换;2017.9.24.18:16补)有偏见，能够达成目标且不损害性能即可;这里调整了sublist与head项的边界，使其边界相交没有缝隙即可把鼠标事件连续起来，而不会中断，所以解决问题的关键点在于洞察力，洞察最直接和简洁的点位，用最简洁的手段解决问题，而不是把问题越解决越复杂，通常复杂的操作是可以避免的，是无意义的消耗行为，一旦遇到了复杂的操作就要思考是否有简洁的替代方案;2017.9.24.18:13左右开写---2017.9.24.18:19写完*/
+	top:49px;	
+	z-index:115;
+}
+.navbar-nav .list ul{
+	padding:0;
+	margin:0;
+}
+.navbar-nav .list .item{
+	float:none;	
+	padding:0.5em 0.1em;
+}
+.navbar-nav .list .item a{
+	margin-right:0.3em;
+}
+/* right nav */
+.nav.right ul {
+	text-align: right;
+}
+
+.nav.center ul {
+	text-align: center;
+}
+.searchContainer{
+	overflow:hidden;/*设置这个属性是防止父div不能被其内部元素撑开的情况出现；如果不做这个设置就会出现父div只有边框显示出来没有高度的情况；2017.8.10.10:51写*/
+	list-style: outside none none;
+	z-index: 3;
+}
+
+.search{
+	position: relative;
+	display: block;	
+	color: -webkit-link;
+	text-decoration: underline;
+	cursor: pointer;
+	text-align: center;
+	width: 32px;
+	height: 32px;
+}
+.on-search{
+	background:#efefef;
+	border-radius:50%;	
+}
+.cd_search_text > input{
+	height:35px;
+	outline:medium none;
+	font-size:12pt;
+	padding:0;
+	background:none;
+	border-style:none;
+	width:100%;
+}
+.inputWidthCollapse{/*此属性备用，待定；2017.8.10.22:46写*/
+	width:0;
+    overflow: hidden;
+    position: relative;
+    transition: width  0.10s ease 0s;
+    -moz-transition:width  0.10s ease 0s; /* Firefox 4 */
+	-webkit-transition:width  0.10s ease 0s; /* Safari and Chrome */
+	-o-transition:width  0.10s ease 0s; /* Opera */
+}
+.cancel_botton{
+	position: relative;
+}
+.cancel_botton.search_cancel{
+	width:20px;
+	height:20px;
+	top:7px;
+	left:3px;
+	margin-right:3px;
+}
+.cancel_botton.win_close{
+	width:16px;
+	height:20px;
+	top:1px;
+	left:0;
+}
+.user_container{
+    height:51px;
+    z-index:13;
+}
+
+.right_cover a,.user_container a{/*登录和注册按钮在页面里有两个方位;2017.8.30.14:28写*/
+    display:block;
+    margin: 4px 4px 4px 6px;
+    color:#666;
+}
+
+#myNavBar {
+    overflow-x: hidden;
+}
+.navbar-collapse {
+    padding:0;
+    margin-left: 0;
+    margin-right: 0;  
+    max-height: 340px; 
+    border-top: 1px solid;
+}
+.in {
+    overflow-y: auto;
+}
+
+.collapse.in {
+    display: block;       
+}
+.collapsing{
+    overflow: hidden;
+    position: relative;
+    display: block;
+    transition: height 0.3s ease 0s;
+}
+.navMenu{
+	overflow:auto;
+}
+.nav_container-fluid > .nav_header,.nav_container-fluid > .navbar-collapse {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.nav_header::before, .navbar-collapse::before,.nav_header::after, .navbar-collapse::after,.user_container::before,.user_container::after{
+    clear: both;
+}
+.hide{
+	display:none !important;
+}
+.show{
+	display:inline!important;/*block改为inline;2017.9.17.10:10写*/
+}
+.noPadding{
+	padding:0 !important;
+	display:block !important;
+}
+.un_visible{
+    visibility:hidden;
+}
+audio, canvas, video {/*参照登录模板，开始操作canvas，实现粒子效果；2017.8.5.20:27写*/
+    display: inline-block;
+}
+.right_nav {/*参照csdn极客头条的用户栏响应式设计;2017.8.29.22:40写*/
+    position: fixed;
+    bottom: 0;
+    background-color: #FFFFFF;      
+    border-top: 1px solid #e7e7e7;
+    box-shadow: 3px 0 0 0 rgba(0, 0, 0, 0.1);
+    z-index:12;
+}
+.right_nav >.oper_menu{
+	position:absolute;
+	top:0;
+	left:0;
+	background-color:#FFFFFF;
+	box-shadow: 0px 1px 5px 0 rgba(90, 109, 122, 0.41);
+	z-index:120;
+}
+.right_nav >.oper_menu > ul{
+	padding:0;
+	margin:0;
+	list-style:outside none none;
+}
+.right_nav >.oper_menu > ul > li{
+	padding:0 10px;
+	cursor:pointer;
+}
+.right_nav >.oper_menu > ul > li:hover{
+	color:#000000;
+}
+.right_nav{
+    transition:right 0.20s ease 0s;
+    -moz-transition:right 0.20s ease 0s;/* Firefox 4 */
+    -webkit-transition:right 0.20s ease 0s;/* Safari and Chrome */
+    -o-transition:right 0.20s ease 0s;/* Opera */
+}
+.right_nav .hide_button{
+    position:absolute;
+    width:22px;
+    height:22px;
+    top:0;
+    right:0;
+    text-align:right;
+    z-index:110;
+}
+
+a.pull_right{
+	right:-28px !important;
+}
+.cursor_ew_resize{
+	cursor:e-resize;
+}
+::-webkit-scrollbar {
+	width:5px;
+}/* 滚动槽 */
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+	border-radius: 5px;
+}/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+	border-radius: 3px;/*原10px;2017.9.12.20:00写*/    
+	background: rgba(0,0,0,0.1);/*#D3D3D3;*/  
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {    
+	background: rgba(0,0,0,0.1);/*rgba(255,0,0,0.4)*/
+}
+a.pull_left {  
+    color:#666666;/*由于原来的背景色设计方式，会导致遮盖内容字体，而且看起来像一片纸片一样不协调，所以改为黑色标记来醒目显示图标;产生的视觉障碍较小;2017.9.18.17:27写*/
+}
+.is_clearing{
+	opacity:0;
+}
+.container_resize{
+	float:right;
+	margin-right:3px;	
+}
+.container_resize a{
+	position:relative;
+	float:left;
+	width: 20px;
+	height: 20px;
+	margin:0 2px;
+}
+
+.maxSize{
+	top:0 !important;
+	width:100% !important;
+	border:none;
+	z-index:120;
+}
+.paging > ul{
+	margin: 0;
+	padding:0;
+	list-style: none;
+	overflow: hidden;/*配合ul外面div容器的最小高度属性，综合起来，解决li浮动，而无法撑开ul外面div的问题；2018.5.11.17:43*/
+}
+.paging > ul > li{
+    padding: 5px 0;
+    float: left;
+}
+.paging > ul > li[class*='page-turning']{
+    margin:0 6px 0 0;
+}
+.paging > ul > li[class*='page-turning'] > a{
+    border:1px solid #ccc;
+    padding:2px;
+}
+.paging > ul > li[class*='page-turning'] > a:hover{
+    border-color: #999;
+}
+.paging > ul > li[class*='page-turning'] > a:first-child{
+    margin:0 10px 0 0;
+}
+.paging > ul > li[class='page-turning-pre'] > a:first-child{
+    margin:0 4px 0 0;
+}
+.paging > ul > li.page-turning-pre,.paging > ul > li.page-total-view{
+    margin:0 5px 0 0;
+}
+.paging > ul > li.page-turning-next{
+    margin:0 8px 0 5px;
+}
+.paging > ul > li.page-num > a{
+    margin:0 4px;
+    padding: 3px;
+}
+.paging > ul > li.page-num > a.focus{
+    border: 1px solid #ccc;
+    color:#000;
+}
+.paging > ul > li.page-jump{
+    margin:0 5px;
+}
+.paging > ul > li.page-jump > span > input.page-jumpTo-inputNum{
+    position:relative;
+    height:22px;
+    width:36px;
+    margin: 0 3px;
+    text-transform: none;
+    border: 1px solid #ccc;
+    -webkit-appearance: none;
+}
+/*2018.5.24.17:24添加从网上摘录的对话框模块*/
+#Overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 121;
+}
+.overlay-mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 121;
+    background: #b3b3b3;
+    opacity: 0.6;
+}
+.overlay-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;   
+    z-index: 122;
+    border-radius: 5px;
+    background-color: white;
+}
+.overlay-header {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+#overlay-close {
+    cursor: pointer;
+    font-size: 24px;
+    padding: 1.5px 8px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+.overlay-content {
+    padding: 10px 5px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.overlay-footer {
+    height: 50px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.overlay-footer button {
+    background-color: white;
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.class_delete_btn{
+    width:12px;
+    height:12px;
+    top:-7px;
+    right:-6px;
+    background-color:#DCDCDC;
+    border-radius:15px;
+    position: absolute;
+    float: right;
+    margin:0 !important;
+}
+body > div.onuse_tools_botton{
+    position:fixed;
+    right:18px;	
+    top:250px;
+    border-radius:50%;      
+    -moz-border-radius: 50%;      
+    -webkit-border-radius: 50%;
+    cursor:pointer;
+}
+body a:hover,.right_nav a:hover{/*由于css是从上至下扫描，因此如果把这条属性放在最前，有些属性的样式可能还未创建，因此需要把这条属性放在最后;2017.9.17.14:28写*/
+    color:#000 !important;
+}
+body a,.hide_button{
+    cursor:pointer;
+}
+section > header{
+    position: relative;
+    padding-top:0;
+    padding-right:0;
+    padding-bottom:5px;
+}
+section > header > h3{
+    font-size: 16px;
+    color: #666;
+    word-break: break-all;
+}
+section > header > .top_count_view{
+    position: absolute;
+    display: block;
+}
+section > header > .top_count_view > a{
+    width: 46px;
+    height: 46px;
+    text-align: center;
+    display: block;
+    padding: 2px 2px;
+}
+section > header > .tag_view{
+    margin: 3px 12px 3px 0;
+    color: #777;
+    min-height:23px;
+    overflow: hidden;
+}
+section > header > .tag_view > ul {
+    list-style: none;
+    float: left;
+    margin: 0 8px 0 0;
+    padding: 0;
+    overflow: hidden;
+}
+section > header > .tag_view > ul > li{
+    float:left;
+}
+section > header > .tag_view > ul > li.tag_icon:first-child{
+    margin: 0 5px 0 0;
+    color:#555;
+}
+.sk-spinner-pulse {
+    width: 6em !important;
+    height: 6em !important;
+    margin: auto;
+    background-color: #999 !important;
+    border-radius: 100%;
+    -webkit-animation: sk-spinner-pulse 0.6s infinite ease-in-out;
+    animation: sk-spinner-pulse 0.6s infinite ease-in-out;
+}
+.sk-spinner-pulse.body-loading{
+    position: fixed;
+    top: calc(50% - 3em);
+    left: calc(50% - 3em);
+}
+.tip{
+    position: fixed;
+    height: 77px;
+    width: 100%;
+    background-color: #f8f8f8;
+    top: -80px;
+    z-index: 200;
+    transition: top  0.10s ease 0s;
+    box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.tip > div{
+    font-size:16px;
+}
+.tip.show_tip{
+    top:0;
+}
+@-webkit-keyframes sk-spinner-pulse {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes sk-spinner-pulse {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+@media (min-width: 768px){/*加上此代码块；可以保证当屏幕宽度小于768px时，能使按钮显示*/
+    .nav{
+        background-color: rgba(255, 255, 255, 0.95);
+    }
+    .navbar-toggle {
+        display: none;
+    }
+    body{
+        height:100%;
+    }
+}
+@media (min-width: 768px){/*之前可能不理解，为什么写这么多@media，怎么不能写一个？因为，这里响应所涉及到的元素有很多种，如果都写在一起不便于阅读，找起来也困难；为了便于独立区分，把需要做响应控制的每个元素类涉及的标签集作为一个独立整体放在一个@media里面来控制，一一对应;这样做是更好的代码组织方式;在这之前自己是没有这个概念的，现在知道了就要形成经验。2017.8.1.15:46写*/
+    .navbar-collapse {/*由于之前没有在这里做响应控制的缘故，把大量的标签都放在全局控制;出现了大量的问题，现在就把这些问题解决掉；2017.8.1.15:50写*/
+        border-top:0 none;
+        box-shadow: none;
+        width: auto;
+    }
+    .navbar-collapse.collapse {		
+        display:block;
+        height:auto;
+        overflow:visible;
+        padding-bottom: 0;
+    }
+    .navbar-collapse.in {
+        overflow-y: visible;
+    }
+    .navbar-fixed-top .navbar-collapse, .navbar-static-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .nav_container > .nav_header, .nav_container-fluid > .nav_header, .nav_container > .navbar-collapse, .nav_container-fluid > .navbar-collapse {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+@media (min-width:768px){	
+    .headTitleContainer .navSelectedItem{
+        display:none;
+    }
+    .nav_header > .viewname{
+        display:none;
+    }
+}
+@media (max-width:767px){		
+    .nav{
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+}
+@media (min-width:768px){
+    .out_width_hide{/*.user_container .user-image改为hide;控制，屏幕尺寸交给mdeia控制;2017.9.17.11:14;js不必再纠结屏幕尺寸转换问题;2017.9.17.11:15写*/
+        display:none;
+    }
+    .user_container > div > div.user_list > a{
+        position: relative;
+        left: 2px;
+    }
+    .user_container:hover > div > div.user_list{
+        display:block !important;
+    }
+}
+@media(max-width:767px){
+    .user_container > div > div.user_list{
+        position: absolute;
+        top: 60px;
+        border: 0;
+        box-shadow: 0 0;
+    }
+    .user_container > div > div.user_list > a{
+        text-align:right;
+    }
+}
+@media(min-width:768px){	
+    .searchContainer{
+        float:right;
+        padding:0.5em 0.2em;	
+        margin-right:0.5em;/*在大屏幕尺寸时，按钮的右侧边距和左侧不太一致，在平板上这种显示屏较小的设备上看的尤其明显；因此这里增加一些宽度，专门解决这个问题域点位的问题(平板尺寸下的按钮边距问题，可见具体到每个型号的设备上又划分成了一些问题域点位，这个思路要引起重视--还是昨天所论述的问题域边界和问题域集合及关系的思想)；2017.8.10.17:25写*/	 
+    }
+    .cancel_botton.search_cancel{
+        float:right;
+        margin-left: 3px;
+    }	
+    .search{
+        float:right;/*测试transition用；2017.8.11.10:48写*/
+    }
+    .cd_search_text{
+        float:right;
+        position:relative;
+        border-color: #e7e7e7;
+        border-style: none none solid;
+        border-width:0 0 1px;
+    }	
+    .inputMaxWidth{
+            width:350px;
+    }
+}
+@media(max-width:767px){
+    .searchContainer{	
+            padding:3px 5px 1px 10px;/*原设置为0.1em 0.2em，但是在点击搜索按钮后，展开了搜索框后，按钮的上下边距看起来并不一致，有视觉差；因此做此修改；这里主要修正了上边距与下边距；2017.8.10.14:24写*//*与其它ul项保持一致；2017.8.9.19:18写*/
+            clear:both;
+    }
+    .cancel_botton.search_cancel{
+        float:left;/*当小尺寸屏幕显示时，取消按钮放在input按钮左侧,否则就和搜索按钮靠的太近，触屏上点击不太方便，因此需要分开排布；2017.8.10.16:45写*/
+        margin-left:2px;
+    }	
+    .search{
+            float:left;/*测试transition用；2017.8.11.14:20写*/
+    }
+    .cd_search_text{
+            float:left;/*width:calc(100% - 4.5em);*//*使用css3新增的属性来解决，input宽度响应式变化的问题；解决效果很好，在解决宽度问题的过程中，需要计算两边元素的宽度及padding/margin值之和为4em，再用100%减去这个和(4em)就可以了，但是又多出一个小宽度，导致搜索按钮下移；那么就要做尝试性的微调，减.5em左右就可以，不会造成大的视觉差而且解决了响应式宽度变化问题；2017.8.10.17:03写*/
+    }	
+    .inputMaxWidth{
+        width:calc(100% - 73px);
+        margin-right:4px;
+    }	
+}
+@media (min-width: 768px) {
+    .nav_header{
+        float: left;
+    }
+    .user_container{
+            float:right;
+    }
+    .navbar-nav .current a{
+            color: #000000;
+    }
+    .current{
+            border-bottom:2px solid #5a5b5b;
+    }
+    .navbar-nav li{
+            float: left;/*把这个属性从全局范围上，拿到这里来控制，以适应响应式布局的需要；2017.7.30.17:46写*/
+    }
+    .navbar-nav li.item{/*padding不再放置于全局区域控制，以做到不同屏幕尺寸的样式分离;2017.9.1.22:56写*/
+            padding: 14px 3px;
+    }
+    .navMenu{
+        padding-left: 20px;
+    }
+    .navbar-nav .list_toggle{
+            display:none;
+    }
+}
+/*之前提出的问题：max-width从767px改为768px，目前还不知有没有影响；今天暴露出来了---当屏幕收缩到一定尺寸时，出现了登录图标移到最左边，而列表项并没有同时隐藏，并出现按钮，而是还显现出来，并且列表项纵向排列；这个问题有弄了半天，不知道原因，把这个@media设置为min-width：767px解决掉了；2017.8.4.14:35写*/
+@media (max-width: 767px){/*max-width从767px改为768px，目前还不知有没有影响；需要再观察，根据问题情况再做微调；2017.7.30.20:13写*//*此代码段参考Creative Company的设计;对这个@media标签不够理解，只知其一不知其二，不能举一反三，即只知道min-width控制，不知道max-width控制；在这里是进行max-width的控制，来达成大于768px时，user_container对应的显示效果；2017.7.30.10:14写*/
+    .user_container{
+        position: absolute;
+        clear:both;
+        float:right;		
+        right: 10px;
+    }
+    .navbar-nav {
+        clear:both;/*加上此条属性，防止在小尺寸屏幕时，响应显示的列表项和搜索区域处于同一水平线的情况，此时需要纵向排列；没加clear:both之前出现了前面说的问题；2017.8.9.22:33写*/
+    }
+    .navbar-nav li:hover > a{
+        background-color: #efefef;
+    }
+    .navbar-nav li{
+        clear: both;/*达成---纵向排布，每个单项占一个屏幕宽度的目标；(只是外观看起来像，但设置这个属性，实际的标签宽度只是表项文字的宽度，而不是充满整屏宽度；2017.7.30.17:45写)*/
+    }
+    .navbar-nav .list_toggle{
+        padding: 0.3em;
+        margin:0;
+    }
+    .navbar-nav .category{/*增加了下拉列表的二级分类，当前只有"公共"和"我的"专门为移动设备定制;所以这里的二级项要有一些缩进;2017.9.5.16:23写*/
+        padding-left:10px;
+    } 
+    .navMenu .item{/*由.navMenu ul li改为.navMenu .item;适应响应式列表需要，并做到描述的精确化;2017.9.1.22:52写*/
+        padding:5px 12px;/*被压缩响应后，纵向的列表项上下宽度有些大；在此做些微调；2017.7.30.13:11写*/
+
+    }
+    .navMenu .item.current{
+        color:#000;
+    }
+    .navbar-collapse{				
+        border-color: #e7e7e7;/*添加此属性为压缩响应时的列表上沿加上边框效果；2017.7.30.13:26写;经过检验，期望的效果达到；2017.7.30.13:40写*/
+    }
+    .collapse{
+        display:none;
+    }
+
+    .nav_flag{
+        display: none;
+    }
+}
+@media (min-width:768px){
+    .nav_container{
+        margin:0 27px;
+    }
+    .right_nav{
+        top:53px !important;
+        right: -56%;
+    }
+    .right_cover{
+        display:none;
+    }
+}
+@media (max-width:767px){
+    .right_nav{	
+        top:0;
+        width:55%;
+        right: -56%;
+    }
+    .right_show{
+        right:0;
+        box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+    }
+    .right_cover { 
+        position: fixed;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 5px;
+        background: #b3b3b3;
+        opacity: 0.6;
+        z-index: 11;
+    }
+    .uname-tip{
+        position: relative;
+        max-width: calc(100% - 70px);
+        top: 5px;
+        color: #555;
+        font-size: 15px;
+        font-weight: bold;
+        word-break: break-all;
+        padding-left: 10px;
+        text-align: right;
+    }
+}
+@media (min-width:768px){
+    .overlay-inner{
+        width: 400px;
+        min-height:250px;
+        margin-top: -125px;
+        margin-left: -200px;
+    }
+    .overlay-content {
+        min-height:140px;
+        height: calc(100% - 110px);
+    }
+    .tip > div{
+        padding:27px;
+    }
+}
+@media (max-width:767px){
+    .overlay-inner{
+        width: calc(100% - 20px);
+        min-height:230px;
+        margin-top: -115px;
+        margin-left: calc(-50% + 10px);
+    }
+    .overlay-content {
+        min-height: 130px;
+        height: calc(100% - 100px);
+    }
+    .tip > div{
+        padding:27px 7px;
+    }
+}

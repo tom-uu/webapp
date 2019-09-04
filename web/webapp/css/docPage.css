@@ -1,0 +1,480 @@
+.doc-content-suspend-top{
+    top:140px;
+}
+.section_content > div > div > div > span{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 12px;
+}
+#doc-list-view > section{
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px dotted #999;
+}
+#doc-list-view > section:last-child{
+    margin: 0;
+    border: none;
+    padding-bottom: 0;
+}
+#doc-list-view > section > header{
+    padding-left:5px;
+}
+#doc-list-view > section > header > div.doc-tagItem-view > ul > li,
+#doc-detail-view > section > header > div.doc-info-view > ul > li{
+    margin: 0 8px 0 0;
+}
+#doc-list-view > section > header > div.doc-tagItem-view > ul > li.sub_icon{
+    margin-left: 20px;
+}
+#doc-detail-view > section > header > div.doc-info-view > ul > li.tag_icon{
+    margin-left:3px;
+}
+#doc-list-view > section > header > div.doc-tagItem-view > a{
+    position:absolute;
+    right:0;
+    color:#666;
+    font-size:13px;
+}
+#doc-list-view > section > div.doc-view{
+    padding: 10px;
+    background-color:#f8f8f8;
+    overflow: hidden;
+    color:#555;
+}
+#doc-list-view > section > div.doc-view > div{
+    cursor:pointer;
+}
+#doc-list-view > div.doc-display-emptyItem {
+    padding: 8px 0;
+    height: 510px;
+    background-color: #f8f8f8;
+    font-size: 10rem;
+    color: #999;
+    text-align: center;
+}
+#doc-list-view > div.doc-display-emptyItem > .icon {
+    position: absolute;
+    top: calc(50% - 30px);
+    left: calc(50% - 80px);
+}
+#doc-list-view > div.doc-display-emptyItem > h3 {
+    position: absolute;
+    width: calc(100% - 100px);
+    top: calc(50% + 90px);
+    left: 50px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+    text-align: center;
+}
+#detail-box-view > div > div.doc-view{
+    overflow: hidden;
+    color: #555;
+}
+#detail-box-view > div > div.doc-view.check-style > div{
+    width:calc(100% - 24px);
+    overflow: visible;
+}
+#detail-box-view > div > div.doc-view > div{
+    position: relative;
+    height:auto;
+    padding:10px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+#doc-list-view > section > div.doc-view > div:hover,
+#detail-box-view > div > div.doc-view > div:hover{
+    color:#333;
+}
+#doc-list-view > section > div.doc-view > div > h3,
+#detail-box-view > div > div.doc-view > div > h3{
+    margin-bottom: 5px;
+}
+#doc-list-view > section > div.doc-view > div > p,
+#detail-box-view > div > div.doc-view > div > p{
+    font-size:1rem;
+    word-wrap: break-word;
+}
+#doc-list-view > section > div.doc-view > div > p:last-child,
+#detail-box-view > div > div.doc-view > div > p:last-child{
+    font-size:13px;
+    margin-top:10px;
+    text-align:right;
+}
+#detail-box-view > div > div.doc-view > div > p:last-child > span:first-child.icon{
+    float:left;
+    font-size: 16px;
+}
+#doc-list-view > section > div.doc-view > div > p:last-child > span:last-child,
+#detail-box-view > div > div.doc-view > div > p:last-child > span:last-child{
+    margin-left:5px;
+}
+#doc-list-view > section > div.doc-view > div > p:last-child > span.audio-tip{
+    margin-right: 24px;
+}
+#doc-list-view > section > div.doc-view > div > p:last-child > span.audio-tip > .icon{
+    font-size:15px;
+}
+#detail-box-view > div > div.doc-view > div > input{
+    position: absolute;
+    right: -24px;
+    top:calc(50% - 7px);
+    margin:0;
+}
+#doc-list-view > section > div.doc-bottom-view,
+#doc-detail-view > section > header > div.doc-bottom-view{
+    overflow:hidden;
+    clear:both;
+}
+#doc-list-view > section > div.doc-bottom-view > .doc-time-view > span.edit-time-tip{
+    margin-right:5px;
+}
+#doc-list-view > section > div.doc-bottom-view > .doc-time-view{
+    float:left;
+    display:block;
+    font-size: 13px;
+    padding-left:5px;
+}
+#doc-list-view > section > div.doc-bottom-view{
+    margin-top:7px;
+}
+#doc-list-view > section > div.doc-bottom-view > .doc-docBtn-view{
+    float:right;
+    text-align: right;
+}
+#doc-list-view > section > div.doc-bottom-view > .doc-docBtn-view > a{
+    position:relative;
+    font-size:13px;
+}
+#doc-list-view > section > div.doc-bottom-view > .doc-docBtn-view > a.doc-delete-trigger{
+    top:-1px;
+}
+#doc-detail-view > section > header{
+    padding:5px 5px 0;
+}
+#doc-detail-view > section > header > div{
+    margin:5px 12px 5px 0;
+    color: #666;
+}
+#doc-detail-view > section > header > div,
+#doc-detail-view ul.doc-info-list{
+    margin-right:0;
+}
+#detail-box-view > div > div.doc-view > div + div{
+    margin-top: 10px;
+}
+#doc-detail-view > section > header > div.doc-bottom-view{
+    position: relative;
+    line-height: 29px;
+}
+#doc-detail-view > section > header > div.doc-bottom-view > div{
+    float:right;
+}
+#doc-detail-view > section > header > div.doc-bottom-view > div button{
+    padding: 3px;
+    margin-left:8px;
+    border: 1px solid #e0e0e0;
+    background-color:#fff;
+    font-size:13px;
+    cursor: pointer;
+}
+#doc-detail-view > section > header > div.doc-bottom-view > div button:hover{
+    background-color: #f8f8f8;
+}
+#doc-detail-view > section > header > div.doc-bottom-view > div > span.rm-doc-btns-view{
+    font-size:13px;
+}
+#doc-detail-view > section > header > div.doc-bottom-view > div > span.rm-doc-btns-view > input{
+    position: relative;
+    top: 3px;
+    margin:0 0 0 20px;
+}
+#doc-detail-view > section > header > div.doc-bottom-view > div > span.rm-doc-btns-view > a{
+    margin-left: 16px;
+}
+#doc-detail-view > section > header > div.doc-bottom-view > div > span.rm-doc-btns-view > a.cancel-rm-btn{
+    padding:3px;
+    border: 1px solid #e0e0e0;
+}
+#doc-detail-view > section > header > div.doc-bottom-view > div > span.rm-doc-btns-view > a.delete-btn{
+    font-size:14px;
+}
+#doc-detail-view > section > header > div.doc-bottom-view > .doc-time-view{
+    float:left;
+    display:block;
+    font-size: 13px;
+}
+#doc-detail-view > section > header > div.doc-bottom-view > .doc-time-view > .doc-display-timeText{
+    margin-left:5px;
+}
+.section_content > div > div > div > div > div:first-child {
+    height: 24px;
+}
+
+#doc-info-view > div > div > div:first-child > a, #doc-info-view > div > div > div:first-child > span {
+    position: relative;
+    float: left;
+}
+
+.section_content > div > div > div > div > div + div {
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+#doc-info-view > div > div > div + div > div {
+    position: relative;
+    float: left;
+    margin-right: 20px;
+}
+
+#doc-info-view > div > div > div + div > div {
+    position: relative;
+    float: left;
+    margin-right: 20px;
+}
+
+.section_content > div > div > div.doc-list > div > span {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 12px;
+}
+#doc-edit-view > div:first-child{
+    padding-bottom: 7px;
+    /*margin-bottom: 8px;*/
+    overflow: hidden;
+    border-bottom: 1px dotted #999;
+}
+#doc-edit-view > div:first-child > span{
+    color: #333;
+}
+#doc-edit-view > div > span:first-child{
+    margin:1px 10px 0 0;
+    float: left;
+}
+#doc-edit-view > div+div > ul{
+    padding: 0;
+    margin:0;
+    float: left;
+    list-style: none;
+}
+#doc-edit-view > div+div > textarea{
+    width:calc(100% - 70px);
+    height:65px;
+    float:left;
+    margin:2px 0 0 2px;
+    border: 1px solid #ccc;
+    -webkit-appearance: none;
+    resize:none;
+}
+#doc-edit-view > div:last-child{
+    border-top:1px dotted #999;
+    padding-top: 8px;
+}
+#doc-edit-view > div:last-child > span{
+    float:right;
+    margin:0;
+}
+#doc-edit-view > div:last-child > span > a{
+    font-size:12px;
+    margin-left:12px;
+}
+#doc-content-view > div > div:last-child.section_content_tag .tag_content > ul > li > div.empty-class-tip {
+    height: 290px;
+    background-color: #f8f8f8;
+    color: #999;
+}
+#doc-content-view > div > div:last-child.section_content_tag .tag_content > ul > li > div.empty-class-tip > .icon {
+    position: absolute;
+    font-size: 6rem;
+    top: calc(50% - 20px);
+    left: calc(50% - 48px);
+}
+#doc-content-view > div > div:last-child.section_content_tag .tag_content > ul > li > div.empty-class-tip > h3 {
+    position: absolute;
+    width: calc(100% - 50px);
+    top: calc(50% + 60px);
+    left: 25px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+    text-align: center;
+}
+#doc-content-view > div > div:last-child.section_content_tag .tag_content > ul{
+    list-style: none;
+}
+#doc-content-view > div > div:last-child.section_content_tag .tag_content > ul.cls-select-list{
+    padding-top: 5px;
+}
+#doc-content-view > div > div:last-child.section_content_tag .tag_content > ul.status-select-list{
+    margin-bottom:5px;
+}
+#doc-content-view > div > div:last-child.section_content_tag .date-time > ul{
+    margin:0;
+    padding: 5px 0;
+    list-style: none;
+    overflow: hidden;
+}
+#doc-content-view > div > div:last-child.section_content_tag .date-time > ul > li{
+    margin-right: 15px;
+    float:left;
+}
+#doc-content-view > div > div:last-child.section_content_tag .date-time > ul > li > input{
+    border: 1px solid #ccc;
+    padding: 2px 0;
+}
+#doc-content-view > div > div div.doc-search-view > input.doc-search-input{
+    width:100%;
+    border-radius: 0;
+    padding: 10px 15px;
+    text-transform: none;
+    border: 1px solid #ccc;
+    -webkit-appearance: none;
+    font-size:15px;
+}
+#doc-content-view > div > div:last-child.section_content_tag .time_select {
+    margin-top: 0;
+}
+#doc-content-view > div > div:last-child.section_content_tag .time-select-list > li{
+    cursor: pointer;
+}
+#doc-content-view > div > div:last-child.section_content_tag > div.freqCls-classify-view > div:first-child > .count-common,
+#doc-content-view > div > div:last-child.section_content_tag > div.topCls-classify-view > div:first-child > .count-folder{
+    font-size:12px;
+    margin-left:12px;
+    color:#999;
+}
+#doc-content-view > div > div:last-child.section_content_tag > div.topCls-classify-view > div > ul.topCls-display-list li{
+    clear:left;
+}
+#doc-content-view > div > div:last-child.section_content_tag > div.topCls-classify-view > div > ul.topCls-display-list > li{
+    width: 100%;
+    margin: 5px 0;
+}
+#doc-content-view > div > div:last-child.section_content_tag > div.topCls-classify-view > div > ul.topCls-display-list > li > span > a > span:last-child{
+    font-size: 12px;
+    margin-left: 15px;
+    color:#999;
+}
+#doc-content-view > div > div:last-child.section_content_tag > div.topCls-classify-view > div > ul.topCls-display-list li ul{
+    padding-left: 20px;
+    list-style: none;
+}
+#doc-content-view > div > div:last-child.section_content_tag > div.topCls-classify-view > div > ul.topCls-display-list > li > span{
+    padding-left: 20px;
+}
+#doc-content-view > div > div:last-child.section_content_tag > div.topCls-classify-view > div > ul.topCls-display-list li > span{
+    display: block;
+    cursor: pointer;
+}
+#doc-content-view > div > div:last-child.section_content_tag > div.topCls-classify-view > div > ul.topCls-display-list li > span:hover,
+#doc-content-view > div > div:last-child.section_content_tag > div.topCls-classify-view > div > ul.topCls-display-list li > span.selected_color{
+    background-color: #f3f3f3;
+}
+#doc-content-view > div > div:last-child.section_content_tag > div.topCls-classify-view > div > ul.topCls-display-list > li > span:hover > a:first-child,
+#doc-content-view > div > div:last-child.section_content_tag > div.topCls-classify-view > div > ul.topCls-display-list > li > ul > li > span:hover > a{
+    color:#000;
+}
+#doc-content-view > div > div:last-child.section_content_tag > div.topCls-classify-view > div > ul.topCls-display-list > li > span > a{
+    position: relative;
+    left: -19px;
+}
+#doc-content-view > div > div:last-child.section_content_tag > div.topCls-classify-view > div > ul.topCls-display-list > li > ul{
+    display: none;
+}
+#doc-content-view > div > div:last-child.section_content_tag > div.topCls-classify-view > div > ul.topCls-display-list > li.show > ul{
+    display:block !important;
+}
+#doc-content-view > div > div:last-child.section_content_tag > div.topCls-classify-view > div > ul.topCls-display-list > li > ul li > span > input{
+    position:relative;
+    top:2px;
+}
+#doc-content-view > div > div:last-child.section_content_tag > div.topCls-classify-view > div > .topCls-select-check,
+#doc-content-view > div > div:last-child.section_content_tag > div.freqCls-classify-view > div >.freqCls-select-check{
+    position: absolute;
+    top: 1px;
+    right:0;
+    font-size: 12px;
+}
+#doc-content-view > div > div:last-child.section_content_tag > div.topCls-classify-view > div > .topCls-select-check > input,
+#doc-content-view > div > div:last-child.section_content_tag > div.freqCls-classify-view > div >.freqCls-select-check > input{
+    position: relative;
+    top:2px;
+    margin: 0 2px;
+}
+#doc-content-view > div > div:last-child.section_content_tag > div.topCls-classify-view > div > .topCls-edit-trigger{
+    right:60px;
+}
+#doc-content-view > div > div:last-child.section_content_tag > div.doc-condition-view > div.tag_content > ul.status-select-list > li > input{
+    position: relative;
+    top:2px;
+    margin:5px 5px 5px 0;
+}
+#doc-content-view > div > div:last-child.section_content_tag > div.doc-condition-view > div.tag_content > ul.cls-select-list > li.all-class{
+    border: none;
+}#doc-content-view > div > div:last-child.section_content_tag .status-select-list > li{
+    cursor:pointer;
+}
+#doc-content-view > div > div:last-child.section_content_tag .status-select-list > li:hover{
+    color:#000;
+}
+#doc-edit-view .doc-edit-topCls,#doc-edit-view .doc-edit-subClsList{
+    float: left;
+    margin: 0 6px 0 2px;
+    position: relative;
+}
+#doc-edit-view > div > .doc-edit-title{
+    position:relative;
+}
+#doc-edit-view ul{
+    margin:0;
+}
+#doc-content-view ul.delete-style > li {
+    position: relative;
+    float: left;
+    border: 1px solid #666;
+}
+#doc-content-view ul.delete-style > li > a{
+    margin:0 5px;
+}
+#doc-edit-view ul.doc-edit-status > li{
+    margin-top:1px;
+}
+#doc-edit-view > .tag-item-view > span{
+    margin-top:5px;
+}
+#doc-content-view > div > div:last-child.section_content_tag ul > li.selected {
+    border: 1px dashed #666;
+    margin:4px;
+}
+#doc-content-view > div > div:last-child.section_content_tag ul > li > a{
+    margin:0 2px;
+}
+#doc-content-view > div > div:last-child.section_content_tag .solid_border{
+    border:1px dashed #777 !important;
+}
+#doc-content-view > div > div:last-child.section_content_tag > div.doc-condition-view > div.tag_content{
+    border-top:1px dotted #999;
+}
+@media (min-width:768px){
+    .sk-spinner-pulse.docList-loading{
+        position: fixed;
+        top: calc(50% - 3em);
+        left: calc(34% - 42px);
+    }	
+}
+@media (max-width:767px){
+    .sk-spinner-pulse.docList-loading{
+        position: fixed;
+        top: calc(50% - 3em);
+        left: calc(50% - 3em);
+    }
+    #detail-box-view > div > div.doc-view > div.touch-remove{
+        position:relative;
+        right:-20px;
+    }
+    #detail-box-view > div > div.doc-view > div.touch-remove > span{
+        position:absolute;
+        left:-30px;
+        top:calc(50% - 16px);
+    }
+}

@@ -1,0 +1,1029 @@
+.icon-btn > span:last-child{
+	vertical-align:bottom;
+}
+span[class*='icon']{
+	position: relative;
+	display:inline-block;
+	vertical-align:top;
+	box-sizing:content-box;
+}
+span[class*='icon']:before,span[class*='icon']:after{
+	content: '';
+	position: absolute;
+	box-sizing:content-box;
+}
+[class$='-m']{
+	width:16px;
+	height:16px;
+}
+[class*="icon-cancel"],[class*='icon-plus'],
+[class*='icon-arrow']:before,[class*='icon-arrow']:after,
+[class*='icon-win'],[class*='icon-win-restore']:after{
+	display:block !important;
+}
+[class*='icon-envelope'],[class*='icon-note']:before,[class*='icon-note']:after,
+[class*='icon-pen'],[class*='icon-cancel']:before,[class*='icon-delete']:before,[class*='icon-arrow']:before{	
+	-webkit-transform: rotate(-45deg);/* Safari 和 Chrome */
+    -moz-transform: rotate(-45deg);/* Firefox */
+    -ms-transform: rotate(-45deg);/* IE 9 */
+    -o-transform: rotate(-45deg);/* Opera */
+	transform: rotate(-45deg);
+}
+[class*='icon-envelope']:after,[class*='icon-chevron'],[class*='icon-cancel']:after,[class*='icon-delete']:after{
+	-webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+[class*='icon-user'],[class*='icon-user']:before,
+[class*='icon-article']:before,[class*='icon-book'],
+[class*='icon-note'],[class*='icon-degree'],
+[class*='icon-degree']:before,[class*='icon-degree']:after,
+[class*='icon-multiple'],[class*='icon-multiple']:before,
+[class*='icon-multiple']:after,[class*='icon-pen'],
+[class*='icon-pen']:after,[class*='icon-quit']:before,
+[class*='icon-comment'],
+[class*='icon-cancel']:before,[class*='icon-cancel']:after,
+[class*='icon-delete']:before,[class*='icon-delete']:after,
+[class*='icon-mic']:before,[class*='search']:after,
+[class*='icon-arrow']:after,[class*='icon-plus']:before,[class*='icon-plus']:after{
+	background:#666;
+}
+[class*='icon-user']:after,[class*='icon-envelope'],[class*='icon-envelope']:before,[class*='icon-envelope']:after,
+[class*='icon-home']:before,[class*='icon-home']:after,[class*='icon-headphone'],[class*='icon-task'],
+[class*='icon-task']:before,[class*='icon-task']:after,[class*='icon-book']:after,[class*='icon-note']:before,
+[class*='icon-pen']:before,[class*='icon-face'],[class*='icon-face']:before,[class*='icon-face']:after,
+[class*='icon-quit'],[class*='icon-quit']:after,[class*='icon-clock'],[class*='icon-clock']:after,
+[class*='icon-comment']:after,[class*='icon-chevron'],[class*='icon-win'],[class*='icon-win-restore']:after,[class*='icon-mic'],[class*='icon-arrow']:before,
+[class*='icon-trash'],[class*='icon-trash']:after{
+	border-style:solid;
+}
+[class*='icon-user']:after,[class*='icon-envelope']:after,[class*='icon-home']:before{
+	border-left-color:transparent;
+	border-right-color:transparent;
+}
+[class*='icon-envelope'],[class*='icon-envelope']:before,[class*='icon-note']:before,[class*='icon-pen']:before,
+[class*='icon-quit'],[class*='icon-quit']:after,[class*='icon-comment']:after{
+	border-top-color:transparent;
+	border-bottom-color:transparent;
+}
+[class*='icon-user']{
+	border-radius: 7px 7px 5px 5px; 
+}
+[class*='icon-user']:after,[class*='icon-home']:before{
+	border-bottom-color:#666;
+}
+[class*='icon-home']:after,[class*='icon-book']:after,[class*='icon-quit'],
+[class*='icon-chevron'],[class*='icon-face'],[class*='icon-face']:before,
+[class*='icon-face']:after,[class*='icon-win'],[class*='icon-win-restore']:after,[class*='icon-arrow']:before,
+[class*='icon-trash'],[class*='icon-trash']:after{
+	border-color:#666;
+}
+[class*='icon-envelope'],[class*='icon-headphone'],
+[class*='icon-task'],[class*='icon-task']:before,[class*='icon-task']:after,
+[class*='icon-trash'],[class*='icon-trash']:before,[class*='icon-trash']:after,
+[class*='icon-clock'],[class*='icon-mic'],[class*='icon-search']{
+	color: #666;
+}
+[class*='icon-quit']:after,[class*='icon-comment']:after{
+	border-left-color:#666;
+}
+[class*='icon-user']:after,[class*='icon-face'],[class*='icon-clock'],[class*='icon-comment'],[class*='icon-search']{
+	border-radius: 50%;	
+}
+[class*='icon-note']:after,[class*='icon-win-restore']{
+	background: #FFF;
+}
+.icon-btn.onfocus > [class*='icon-user'],.icon-btn.onfocus > [class*='icon-user']:before,
+.icon-btn:hover > [class*='icon-user'],.icon-btn:hover > [class*='icon-user']:before,
+.icon-btn.onfocus > [class*='icon-article']:before,.icon-btn:hover > [class*='icon-article']:before,
+.icon-btn.onfocus > [class*='icon-book'],.icon-btn:hover > [class*='icon-book'],
+.icon-btn.onfocus > [class*='icon-note'],.icon-btn:hover > [class*='icon-note'],
+.icon-btn.onfocus > [class*='icon-degree'],.icon-btn.onfocus > [class*='icon-degree']:before,
+.icon-btn.onfocus > [class*='icon-degree']:after,.icon-btn:hover > [class*='icon-degree'],
+.icon-btn:hover > [class*='icon-degree']:before,.icon-btn:hover > [class*='icon-degree']:after,
+.icon-btn.onfocus > [class*='icon-multiple'],.icon-btn.onfocus > [class*='icon-multiple']:before,
+.icon-btn.onfocus > [class*='icon-multiple']:after,.icon-btn:hover > [class*='icon-multiple'],
+.icon-btn:hover > [class*='icon-multiple']:before,.icon-btn:hover > [class*='icon-multiple']:after,
+.icon-btn.onfocus > [class*='icon-pen'],.icon-btn.onfocus > [class*='icon-pen']:after,
+.icon-btn:hover > [class*='icon-pen'],.icon-btn:hover > [class*='icon-pen']:after,
+.icon-btn.onfocus > [class*='icon-quit']:before,.icon-btn:hover > [class*='icon-quit']:before,
+.icon-btn.onfocus > [class*='icon-comment'],.icon-btn:hover > [class*='icon-comment'],
+.icon-btn.onfocus > [class*='icon-cancel']:before,.icon-btn:hover > [class*='icon-cancel']:before,
+.icon-btn.onfocus > [class*='icon-cancel']:after,.icon-btn:hover > [class*='icon-cancel']:after,
+.icon-btn.onfocus > [class*='icon-mic-search']:before,.icon-btn:hover > [class*='icon-mic-search']:before,
+.icon-btn.onfocus > [class*='icon-search']:after,.icon-btn:hover > [class*='icon-search']:after,
+.icon-btn.onfocus > [class*='icon-arrow']:after,.icon-btn:hover > [class*='icon-arrow']:after,
+.icon-btn.onfocus > [class*='icon-plus']:before,.icon-btn.onfocus > [class*='icon-plus']:after,
+.icon-btn:hover > [class*='icon-plus']:before,.icon-btn:hover > [class*='icon-plus']:after{
+	background:#000;
+}
+.icon-btn.onfocus > [class*='icon-home']:after,.icon-btn:hover > [class*='icon-home']:after,
+.icon-btn.onfocus > [class*='icon-article'],.icon-btn:hover > [class*='icon-article'],
+.icon-btn.onfocus > [class*='icon-book'],.icon-btn:hover > [class*='icon-book']:after,
+.icon-btn.onfocus > [class*='icon-quit'],.icon-btn:hover > [class*='icon-quit'],
+.icon-btn.onfocus > [class*='icon-chevron'],.icon-btn:hover > [class*='icon-chevron'],
+.icon-btn.onfocus > [class*='icon-face'],.icon-btn:hover > [class*='icon-face'],
+.icon-btn.onfocus > [class*='icon-face']:before,.icon-btn:hover > [class*='icon-face']:before,
+.icon-btn.onfocus > [class*='icon-face']:after,.icon-btn:hover > [class*='icon-face']:after,
+.icon-btn.onfocus > [class*='icon-win'],.icon-btn:hover > [class*='icon-win'],
+.icon-btn.onfocus > [class*='icon-win-restore']:after,.icon-btn:hover > [class*='icon-win-restore']:after,
+.icon-btn.onfocus > [class*='icon-arrow']:before,.icon-btn:hover > [class*='icon-arrow']:before,
+.icon-btn:hover > [class*='icon-trash'],.icon-btn:hover > [class*='icon-trash']:after{
+	border-color:#000;
+}
+.icon-btn.onfocus > [class*='icon-envelope'],.icon-btn:hover > [class*='icon-envelope'],
+.icon-btn.onfocus > [class*='icon-headphone'],.icon-btn:hover > [class*='icon-headphone'],
+.icon-btn.onfocus > [class*='icon-task'],.icon-btn:hover > [class*='icon-task'],
+.icon-btn.onfocus > [class*='icon-task']:before,.icon-btn:hover > [class*='icon-task']:before,
+.icon-btn.onfocus > [class*='icon-task']:after,.icon-btn:hover > [class*='icon-task']:after,
+.icon-btn.onfocus > [class*='icon-clock'],.icon-btn:hover > [class*='icon-clock'],
+.icon-btn.onfocus > [class*='icon-mic-search'],.icon-btn:hover > [class*='icon-mic-search'],
+.icon-btn.onfocus > [class*='icon-search'],.icon-btn:hover > [class*='icon-search'],
+.icon-btn:hover > [class*='icon-trash'],.icon-btn:hover > [class*='icon-trash']:before,.icon-btn:hover > [class*='icon-trash']:after{
+	color: #000;
+}
+.icon-btn.onfocus > [class*='icon-user']:after,.icon-btn:hover > [class*='icon-user']:after,
+.icon-btn.onfocus > [class*='icon-home']:before,.icon-btn:hover > [class*='icon-home']:before{
+	border-bottom-color:#000;
+}
+.icon-btn.onfocus > [class*='icon-quit']:after,.icon-btn:hover > [class*='icon-quit']:after,
+.icon-btn.onfocus > [class*='icon-comment']:after,.icon-btn:hover > [class*='icon-comment']:after{
+	border-left-color:#000;
+}
+[class*='icon-user']:after,[class*='icon-envelope'],
+[class*='icon-envelope']:before,[class*='icon-envelope']:after,
+[class*='icon-home']:before,[class*='icon-pen']:before,
+[class*='icon-quit']:after,[class*='icon-comment']:after{
+	width: 0;
+    height: 0;
+}
+.icon-user-m{    
+    width: 6px;
+    height: 8px;
+    left: 5px;  
+    margin-right: 14px;
+	margin-left: 3px;
+}
+.icon-user-m:before{
+    width: 2px;
+    height: 4px;
+    top: 7px;
+    left: 2px;   
+}
+.icon-user-m:after {  
+    top: 10px;
+    left: -7px;
+    border-width:0 10px 5px 10px;   
+}
+.icon-user-l{
+	width: 10px;
+	height: 12px;
+	left: 5px;
+	margin-right: 14px;
+	margin-left: 3px;
+}
+.icon-user-l:before{
+	width: 4px;
+	height: 5px;
+	top: 12px;
+	left: 3px;
+}
+.icon-user-l:after{
+	top: 15px;
+	left: -9px;
+	border-width: 0 14px 7px 14px;
+}
+[class*='icon-envelope']{
+	border-right-color:#666;
+}
+[class*='icon-envelope']:before{
+	border-left-color:#666;
+}
+[class*='icon-envelope']:after{
+	border-top-color:#666;
+}
+.icon-envelope-m{
+	border-width:8px 8px 8px 0;    
+    top: 3px;
+    left: -1px;
+}
+.icon-envelope-m:before {
+	border-width:8px 0 8px 8px;   
+    top: -1px;
+    left: 7px;
+    -webkit-transform: rotate(90deg);
+}
+.icon-envelope-m:after {
+	border-width:6px 6px 0 6px;   
+    top: -4px;
+    left: 6px;
+}
+.icon-box.onfoucs > [class*='icon-envelope'],.icon-btn:hover > [class*='icon-envelope']{
+	border-right-color:#000;
+}
+.icon-box.onfoucs > [class*='icon-envelope']:before,.icon-btn:hover > [class*='icon-envelope']:before{
+	border-left-color:#000;
+}
+.icon-box.onfoucs > [class*='icon-envelope']:after,.icon-btn:hover > [class*='icon-envelope']:after{
+	border-top-color:#000;
+}
+[class*='icon-home']:before{   
+    top: 0;    
+	border-top-color:transparent;
+}
+.icon-home-l{
+	width:24px;
+	height:24px;
+}
+.icon-home-l:before{
+	left: -4px;
+	border-width: 0 14px 14px 14px;
+}
+.icon-home-l:after{
+	height: 5px;
+	width: 12px;
+	top: 13px;
+	left: 0;
+	border-width: 4px 4px 0 4px;
+}
+.icon-home-m{
+	margin-left:3px;
+	margin-right:3px;
+}
+.icon-home-m:before{/*看准就操作，大刀阔斧地推进，不要踌躇犹豫，在简明的结点上要雷厉风行，即使出了错也很好修正，不要在这些简明的细节上纠缠而浪费太多时间。2017.11.21.16:28---2017.11.21.16:30*/    
+    left: 0px;
+    border-width:0 8px 8px 8px;
+}
+.icon-home-m:after{
+    height: 4px;
+    width: 6px;
+    top: 8px;
+    left: 2px;
+    border-width: 3px 3px 0 3px;
+}
+[class*='icon-article']{
+	border: 2px solid #666;
+    border-radius: 3px;
+}
+.icon-article-l{
+	width: 18px;
+	height: 20px;
+	margin-left: 3px;
+	margin-right: 4px;
+}
+.icon-article-l:before{
+	width: 10px;
+	height: 2px;
+	top: 5px;
+	left: 4px;
+	box-shadow: 0 4px 0 #666, 0 8px 0 #666;
+}
+.icon-article-m{
+	width:11px;
+	height:12px;
+	margin-left: 3px;
+	margin-right: 4px;
+}
+.icon-article-m:before{
+	width: 5px;
+    height: 2px;    
+    top: 2px;
+    left: 3px;
+    box-shadow: 0 3px 0 #666, 0 6px 0 #666;
+}
+.icon-btn.onfocus > [class*='icon-article-m']:before,.icon-btn:hover > [class*='icon-article-m']:before{
+	box-shadow: 0 3px 0 #000, 0 6px 0 #000;
+}
+.icon-btn.onfocus > [class*='icon-article-l']:before,.icon-btn:hover > [class*='icon-article-l']:before{
+	box-shadow: 0 4px 0 #000, 0 8px 0 #000;
+}
+[class*='icon-headphone']{	
+ 	border-width: 2px;
+ 	border-bottom-color: transparent;
+    border-radius: 32px / 32px 32px 16px 16px;
+}
+[class*='icon-headphone']:before{
+	border-radius: 5px;    
+}
+.icon-headphone-l{
+	width: 20px;
+	height: 19px;
+	margin-left: 3px;
+	margin-right: 4px;
+}
+.icon-headphone-l:before{
+	width: 4px;
+	height: 9px;
+	left: 2px;
+	bottom: -3px;
+	box-shadow: inset 0 0 0 32px,12px 0 0 0;
+}
+.icon-headphone-m{
+    width: 12px;
+    height: 11px; 
+    margin-left: 3px;
+	margin-right: 4px; 
+}
+.icon-headphone-m.no-margin{
+	margin:0;
+}
+.icon-headphone-m:before {
+    width: 3px;
+    height: 6px;
+    left: 1px;
+    bottom: -2px;
+    box-shadow: inset 0 0 0 32px #666,7px 0 0 0 #666;
+}
+.icon-btn.onfocus > [class*='icon-headphone']:before,.icon-btn:hover > [class*='icon-headphone']:before{
+	box-shadow: inset 0 0 0 32px #000,7px 0 0 0 #000;
+}
+[class*='icon-task'],[class*='icon-task']:before,[class*='icon-task']:after{
+	border-width:1px 1px 1px 0;	
+}
+[class*='icon-task']{
+	width:3px;
+}
+[class*='icon-task']:before{
+	width:8px;
+}
+[class*='icon-task']:after{
+	width:5px;
+}
+.icon-task-m,.icon-task-m:before,.icon-task-m:after{
+	height:2px;
+}
+.icon-task-m{
+	border-left-width: 11px;
+	margin-left: 3px;
+	margin-right: 5px;
+}
+.icon-task-m:before{/*转化一下思维，打破思维定式:之前的思路是把元素做成外边框，然后内部用其他元素来填充中空部分；但是这样的话三个元素就不够使用了，因为要做得比较鲜明，至少需要两个进度小图标单元;后来转换了思路，用各进度小图标单元的左边框来模拟进度，元素本身居右且中空加外边框，这样从视觉上看就很像进度条，经过试探发现这是可以达到预期效果的。2017.11.19.20:50*/ 		
+	border-left-width:6px;	
+	top:4px; 
+	left:-11px; 
+}
+.icon-task-m:after{
+	border-left-width:9px;
+	top:9px;
+	left:-11px;
+}
+.icon-task-l,.icon-task-l:before,.icon-task-l:after{
+	height: 3px;
+}
+.icon-task-l{
+	border-left-width: 14px;
+	margin-left: 3px;
+	margin-right: 5px;
+}
+.icon-task-l:before{
+	border-left-width: 9px;
+	top: 7px;
+	left: -14px;
+}
+.icon-task-l:after{
+	border-left-width: 12px;
+	top: 15px;
+	left: -14px;
+}
+.icon-task-s,.icon-task-s:before,.icon-task-s:after{
+	height: 1px;
+}
+.icon-task-s{
+    border-left-width:8px;
+    top:5px;
+}
+.icon-task-s:before{
+    border-left-width:3px;
+    top:3px;
+    left:-8px;
+}
+.icon-task-s:after{
+    border-left-width:6px;
+    top:7px;
+    left:-8px;
+}
+[class*='icon-book']{
+	border-radius:2px 0 0 0;
+}
+[class*='icon-book']:before{
+	border-top:1px solid #FFF;
+	border-bottom:1px solid #FFF;
+}
+[class*='icon-book']:after{
+	border-width:0 1px 1px 0;
+    border-bottom-left-radius:3px;
+    left:0;
+}
+.icon-book-l{
+	width: 17px;
+	height: 20px;
+	margin-right: 11px;
+	left: 4px;
+}
+.icon-book-l:before{
+	width: 8px;
+	height: 3px;
+	top: 5px;
+	left: 5px;
+}
+.icon-book-l:after{
+	width: 18px;
+	height: 18px;
+	bottom: -2px;
+}
+.icon-book-m{
+    width: 11px;
+    height: 13px;
+    margin-right:11px;
+    left:4px;
+}
+.icon-book-m:before{
+    width: 4px;
+    height: 3px;
+    top:3px;
+    left:4px;
+}
+.icon-book-m:after{
+    width: 12px;
+    height:13px;
+    bottom:-2px;
+}
+.icon-book-s{
+    width: 9px;
+	height: 11px;
+	top: 4px;
+	left:1px;
+}
+.icon-book-s:before{
+    width: 4px;
+    height: 2px;
+    top:2px;
+    left:3px;
+}
+.icon-book-s:after{
+    width: 10px;
+    height:10px;
+    bottom:-2px;
+}
+[class*='icon-degree']{	
+	border:1px solid #FFF;
+	border-radius:1px 1px 0 0;
+}
+[class*='icon-degree']:before{
+	-webkit-transform: rotate(50deg) skew(-10deg, -20deg);
+    -moz-transform: rotate(50deg) skew(-10deg, -20deg);
+    -ms-transform: rotate(50deg) skew(-10deg, -20deg);
+    -o-transform: rotate(50deg) skew(-10deg, -20deg);
+    transform: rotate(50deg) skew(-10deg, -20deg);
+    left:-1px;
+    z-index:-1; 
+}
+[class*='icon-degree']:after{
+	top:-1px;
+	left:-3px;
+}
+.icon-degree-l{
+	width: 16px;
+	height: 11px;
+	top: 8px;
+	left: 1px;
+	margin-left: 4px;
+	margin-right: 6px;
+}
+.icon-degree-l:before{
+	width: 18px;
+	height: 18px;
+	top: -10px;
+}
+.icon-degree-l:after{
+	width: 2px;
+	height: 13px;
+	left: -4px;
+}
+.icon-degree-m{  
+	width:10px;
+	height:6px;
+	top:5px;
+	left:1px;
+	margin-left:4px;
+	margin-right:6px;
+}
+.icon-degree-m:before{
+    width: 12px;
+    height: 12px;
+    top: -7px;    
+}
+.icon-degree-m:after{
+	width:1px;
+	height:9px;	
+}
+.icon-degree-s{
+	width: 7px;
+    height: 4px;
+    top:10px;
+    left:3px;
+}
+.icon-degree-s:before{
+	width: 9px;
+    height: 9px;
+    top: -6px;
+}
+.icon-degree-s:after{
+	width: 1px;
+    height: 7px;
+} 
+[class*='icon-multiple']{
+	position: absolute;
+}
+[class*='icon-multiple'],[class*='icon-multiple']:before,[class*='icon-multiple']:after{	
+	border-radius: 1px; 
+}
+[class*='icon-multiple']:before{
+	-webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    -o-transform: rotate(60deg);
+	transform: rotate(60deg);
+}
+[class*='icon-multiple']:after{
+	-webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg);
+    -o-transform: rotate(-60deg);
+	transform: rotate(-60deg);
+}
+[class*='icon-multple']:before,[class*='icon-multple']:after{
+	left: 0;
+    top: 0; 
+}
+.icon-multiple-m{/*要做到思路和操作步骤的条理性、连续性，就要保持念头的条理和连续，念头始终专注于当前问题域，语言和思维形式化都转化为口诀和口令(就像背诵乘法口诀一样来设计问题域的求解步骤口诀、口令，用来指导和定位自己的活动;2017.11.21.17:22)用来提示和指引自己的操作行为，这样活动才能保持稳定而持续有效地进行，不会因为疑惑不解而产生思想纠缠而中断，阻碍活动进程；2017.11.21.17:21*/
+	left:6px;
+}
+.icon-multiple-m,.icon-multiple-m:before,.icon-multiple-m:after{
+	width: 4px;
+    height: 16px;
+}
+[class*='icon-pen']:after{
+	border-radius: 0 2px 2px 0;
+}
+.icon-pen-m{
+    width: 10px;
+    height: 6px;   
+    left: 4px;
+    top: -4px;
+}
+.icon-pen-m:before {
+    border-width:3px 6px 3px 0;
+    border-right-color: #666;
+    top: 0;
+    left: -7px;
+}
+.icon-pen-m:after {
+   width: 3px;
+   height: 6px;
+   top: 0;
+   right: -4px;
+}
+.icon-btn.onfocus > [class*='icon-pen']:before,.icon-btn:hover > [class*='icon-pen']:before{
+	border-right-color: #000;
+}
+[class*='icon-face']{
+	border-width: 1px;  
+}
+.icon-face-m{    
+    height: 14px;
+    width: 14px;
+}
+.icon-face-m:before {   
+    height: 2px;
+    width: 4px;
+    left: 3px;
+    top: 29%;
+    background-color: transparent;
+    border-width: 0 2px;
+}
+.icon-face-m:after {   
+    width: 6px;
+    height: 1px;
+    left: calc(50% - 3px);    
+    border-width: 0 0 1px 0;
+    bottom: 4px;
+}
+[class*='icon-quit']{
+    border-width:2px 0 2px 2px;
+    border-radius:3px 0 0 3px; 
+}
+.icon-quit-m{
+    width: 6px;
+    height: 8px;
+}
+.icon-quit-m:before{
+    width: 6px;
+    height: 4px;
+    top: 2px;
+    right: -2px;
+}
+.icon-quit-m:after{
+    border-width: 6px 0 6px 4px;
+    left: 8px;
+    top: -2px;
+}
+[class*='icon-clock']{	
+    border-width: 2px;
+}
+[class*='icon-clock']:after{
+    border-width:0 2px 2px 0;
+}
+.icon-clock-s{
+    width: 9px;
+    height: 9px;
+    top: 5px;
+    left: 1px;
+}
+.icon-clock-s:after {
+    width: 2px;
+    height: 3px;
+    top: 1px;
+    right: 3px;
+}
+[class*='icon-comment']:after{
+    -webkit-transform: rotate(7deg);
+    -moz-transform: rotate(7deg);
+    -ms-transform: rotate(7deg);
+    -o-transform: rotate(7deg);
+    transform: rotate(7deg);
+}
+.icon-comment-s{
+    width: 13px;
+    height: 9px; 
+    top:5px;   
+}
+.icon-comment-s:after {
+    border-width:6px 0 4px 4px;
+    top: 3px;
+    left: 3px;   
+}
+[class*='icon-chevron-left']{
+    border-width:0 0 2px 2px; 
+    top:-1px;       
+}
+[class*='icon-chevron-right']{
+    border-width:2px 2px 0 0;        
+}
+[class*='icon-chevron-down']{
+    width: 7px;
+    height: 7px;
+    left:2px;
+    border-width:0 3px 3px 0;  
+}
+.icon-chevron-left-l,.icon-chevron-right-l{
+    width:11px;
+    height:11px;
+    top: -5px;
+}
+.icon-chevron-right-l{
+    left:-6px;
+}
+.icon-chevron-left-m,.icon-chevron-right-m,.icon-chevron-down-m,.icon-chevron-right-font{
+    width:9px;
+    height:9px;
+    margin-right:6px;
+}
+.icon-chevron-down-t{
+    width:6px;
+    height:6px;
+    border-width:0 2px 2px 0;
+    border-color: #505050;
+}
+.icon-chevron-right-font{
+    border-width:1px 1px 0 0;
+    margin-left:2px; 
+}
+[class*='icon-win-max']{
+    border-width: 3px 2px 2px 2px;    
+}
+.icon-win-max-s{
+    height: 6px;
+    width: 8px;
+    top: 5px;
+    left: calc(50% - 7px);
+}
+[class*='icon-win-restore'],[class*='icon-win-restore']:after{
+	border-width: 2px;	
+}
+.icon-win-restore-s{
+	height: 6px;
+	width: 6px;
+	top:calc(50% - 4px);
+	left:calc(50% - 7px);		
+}
+.icon-win-restore-s:after{	
+	width: 6px;
+	height: 6px;	
+	top: -5px;
+	left: 1px;
+	z-index: -1;
+}
+[class*='icon-cancel']:before,[class*='icon-cancel']:after{
+	height:3px;
+	top:8px; 
+	left:0; 
+	border-radius:10px;	
+}
+.icon-cancel-s:before,.icon-cancel-s:after{
+	width:14px;	
+}
+.icon-cancel-m:before,.icon-cancel-m:after{
+	width:16px;	
+}
+.icon-cancel-l{
+	top:1px;
+}
+.icon-cancel-l:before,.icon-cancel-l:after{
+	width:22px;
+}
+[class*='icon-delete']:before,[class*='icon-delete']:after{
+	height:2px;
+	top:-18px; 
+	left:2px; 
+	border-radius:10px;	
+}
+.icon-delete-s:before,.icon-delete-s:after{
+	width:8px;	
+}
+[class*='icon-trash']{
+	border-width: 0 2px 2px 2px;
+}
+[class*='icon-trash']:before {
+	box-shadow: inset 0 0 0 32px,-3px 2px 0 0,-3px 2px 0 0,0 2px 0 0,2px 2px 0 0,3px 2px 0 0;	
+}
+[class*='icon-trash']:after{
+	border-width: 0 1px;
+}
+.icon-trash-s{
+	width: 7px;
+	height: 6px;
+	top: -6px;
+}
+.icon-trash-s:before{
+	width: 5px;
+	height: 2px;
+	top: -5px;
+	left: 1px;
+}
+.icon-trash-s:after{
+	width: 1px;
+	height: 5px;
+	left: 2px;
+}
+[class*='icon-mic'],[class*='icon-mic']:before,[class*='icon-mic']:after{
+	box-sizing: border-box !important;
+}
+[class*='icon-mic']{
+	border-width: 0 2px 2px;
+	-webkit-border-radius: 20px / 0 0 20px 20px;
+	-moz-border-radius: 20px / 0 0 20px 20px;
+	-o-border-radius: 20px / 0 0 20px 20px;
+	border-radius: 20px / 0 0 20px 20px;
+}
+[class*='icon-mic']:before,[class*='icon-mic']:after{
+	left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+[class*='icon-mic']:before{
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-o-border-radius: 20px;
+	border: 2px solid;
+	border-radius: 20px;		
+}
+.icon-mic-search{
+	width:14px;
+	height:9px;
+	top:-5px;
+	left:2px;
+}
+.icon-mic-search:before{
+	width: 8px;
+	height: 14px;
+	top: -8px;
+}
+.icon-mic-search:after{
+	width: 2px;
+    height: 2px;
+    bottom: -4px;
+    box-shadow: inset 0 0 0 32px,0 1px,0 2px,-2px 2px,-4px 2px,-2px 2px,2px 2px,4px 2px,2px 2px;/*不熟悉box-shadow的边框计算方法，但是由于可以在浏览器上调试，通过设置颜色，找到了各段内的点位的方位情况，这样就可以用视觉定位进行明确和针对性的尝试，也得出了结果;这种方法在求解未知问题时要运用；通过这种定位、试探、碰撞可以找出规律，定位问题，求解问题。以后在各学科特别是实践类的，比如实验中可以运用这种方法，就像医生诊断病人那样，在不知道病因的情况下试探操作；2017.11.15.21:54*/
+}
+.icon-mic-input{
+	width:28px;
+	height:20px;
+	top:calc(50% - 6px);
+	left:calc(50% - 14px);
+}
+.icon-mic-input:before{
+	width: 16px;
+	height: 29px;
+	top: -15px;
+}
+.icon-mic-input:after{
+	width: 2px;
+    height: 2px;
+    bottom: -4px;
+    box-shadow: inset 0 0 0 32px,0 2px,0 4px,0 6px,-2px 6px,2px 6px,-4px 6px,4px 6px,-6px 6px,6px 6px,-8px 6px,8px 6px;/*突然发现阴影是各个像素点组成的，恍然大悟，这些像素参数组就是各个点位坐标的描述，这个轮廓是一个一个点组成的，而且每个像素点的高度和宽度均为2px,就是上面width和height属性设置的像素大小，就是小正方形点；明白了这个原理后，就直接写出了这个属性值，达到了放大轮廓的效果；2017.11.16.15:05*/
+}
+.icon-btn.onfocus > [class*='icon-mic-search']:after,.icon-btn:hover > [class*='icon-mic-search']:after{
+	box-shadow: inset 0 0 0 32px #000,0 1px,0 2px,-2px 2px,-4px 2px,-2px 2px,2px 2px,4px 2px,2px 2px;
+}
+[class*='icon-search']{
+	border: 3px solid;
+	box-sizing: border-box !important;
+}
+[class*='icon-search']:after{	
+	border-radius: 0 1px 1px 0;
+	transform-origin: left bottom;
+	-ms-transform-origin: left bottom;
+	-moz-transform-origin: left bottom;	
+	-webkit-transform-origin: left bottom;
+	-o-transform-origin: left bottom;
+	transform:rotate(47deg);
+	-ms-transform:rotate(47deg); 	/* IE 9 */
+	-moz-transform:rotate(47deg); 	/* Firefox */
+	-webkit-transform:rotate(47deg); /* Safari 和 Chrome */
+	-o-transform:rotate(47deg); 	/* Opera */
+}
+.icon-search-l{
+	width: 15px;
+	height: 15px;
+	left:-1px;
+	top: -1px;
+}
+.icon-search-l:after{
+	width: 9px;
+	height: 3px;		
+	top: 7px;
+	left: 7px;	
+}
+[class*='icon-arrow']{
+	overflow:hidden; 
+	width:20px;
+	height:22px;
+}
+[class*='icon-arrow']:before{	
+	border-width:2px;
+}
+[class*='icon-arrow-left-s']:before,[class*='icon-arrow-right-s']:before{
+	width: 4px;
+	height: 4px;	
+	top: 8px;
+}
+[class*='icon-arrow-left-s']:after,[class*='icon-arrow-right-s']:after{
+	width: 13px;
+	height: 2px;
+    top: 10px;
+}
+.icon-arrow-left-s:before{
+	left:4px;
+	border-right-width: 0;
+    border-bottom-width: 0;
+}
+.icon-arrow-left-s:after{
+	left:6px;
+}
+.icon-arrow-right-s:before{
+	right:4px;	
+	border-left-width: 0;
+    border-top-width: 0;
+}
+.icon-arrow-right-s:after{
+	right:6px;
+}
+[class*='icon-plus']:before,[class*='icon-plus']:after{
+	border-radius:10px;
+}
+.icon-plus-l{
+	width:12px;
+	height:12px;
+	top: 5px;
+	left: 4px;
+}
+.icon-plus-l:before{
+	width:12px;
+	height:2px; 	
+	top:5px; 
+}
+.icon-plus-l:after{
+	width:2px;
+	height:12px; 	 
+	left: 5px;
+}
+.icon-plus-m{
+	width:10px;
+	height:10px;
+	top: 2px;
+	left: 2px;
+}
+.icon-plus-m:before{
+	width:10px;
+	height:2px; 	
+	top:4px; 
+}
+.icon-plus-m:after{
+	width:2px;
+	height:10px; 	 
+	left: 4px;
+}
+.plus{
+	position:absolute;
+	width:20px;
+	height:20px;
+}
+.plus-m{
+    display: block;
+    width:14px;
+    height:14px;
+}
+.three-quarters-loader:not(:required) {
+	position: relative;
+	width: 14px;
+    height: 14px;
+    overflow: hidden;
+    text-indent: -9999px;   
+    border-radius: 7px;
+    box-sizing: border-box;
+    display: inline-block;
+    -moz-animation: three-quarters-loader 1250ms infinite linear;
+    -webkit-animation: three-quarters-loader 1250ms infinite linear;
+    animation: three-quarters-loader 1250ms infinite linear;
+    border: 2px solid #666;
+    border-right-color: rgb(51, 136, 238);
+    border-right-color: transparent;
+    top:4px;    
+}
+.k-line{
+    text-align: center;
+}
+.k-line > .line{
+    position: relative;
+    display: inline-block;
+    top:-2px;
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    background-color: #666;
+    vertical-align: middle;
+}
+.k-line > .line+.line{
+    margin-left:2px;
+}
+.k-line:hover > .line{
+    background-color: #000;
+}
+
+.b-icon {
+    font-size: 23px;
+}
+.b-icon_type_folder {
+    display: inline-block;
+    background-color: transparent;
+    overflow: hidden;
+}
+.b-icon_type_folder:before {
+    content: '';
+    float: left;
+    background: #a3a3a3;
+    width: 1.25em;
+    height: 0.45em;
+    margin-left: 0.05em;
+    margin-bottom: -0.07em;
+    border-top-left-radius: 0.1em;
+    border-top-right-radius: 0.1em;
+    box-shadow: 1.1em 0.22em 0 0em #a3a3a3;
+}
+.b-icon_type_folder:after {
+    content: '';
+    float: left;
+    clear: left;
+    background: linear-gradient(to right,#e2e2e2,#c6c6c6);
+    width: 2.5em;
+    height: 1.8em;
+    border-radius: 0.1em;
+}
+
+@keyframes three-quarters-loader{
+	0% {
+    	-moz-transform: rotate(0deg);
+    	transform: rotate(0deg);
+	}	
+	100% {
+    	-moz-transform: rotate(360deg);
+    	-ms-transform: rotate(360deg);
+   		-webkit-transform: rotate(360deg);
+    	transform: rotate(360deg);
+	}
+}

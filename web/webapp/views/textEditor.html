@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="/webapp/script/view/textEditor.js"></script>
+<div id="textEditorView">
+    <div>
+        <div class="editor-tool-box">
+            <ul class="edit-bar block-style">
+                <li data-k="bold"><i class="icon">&#xe87f;</i></li>
+                <li data-k="italic"><i class="icon">&#xe880;</i></li>
+                <li data-k="underline"><i class="icon">&#xf0cd;</i></li>
+                <li data-k="setFont"><i class="icon">&#xe87e;</i></li>
+                <li data-k="setTextColour"><i class="icon">&#xf1fc;</i></li>
+                <li data-k="setHighlightColour"><i class="icon">&#xf0fd;</i></li>
+                <li data-k="makeHeader"><i class="icon">&#xf1dc;</i></li>
+                <li data-k="increaseQuoteLevel"><i class="icon">&#xf10d;</i></li>
+                <li data-k="setTextAlignment-left"><i class="icon">&#xe888;</i></li>
+                <li data-k="setTextAlignment-right"><i class="icon">&#xe889;</i></li>
+                <li data-k="setTextAlignment-center"><i class="icon">&#xe884;</i></li>
+                <li data-k="setTextAlignment-justify"><i class="icon">&#xe886;</i></li>
+                <li data-k="makeUnorderedList"><i class="icon">&#xf0ca;</i></li>
+                <li data-k="makeOrderedList"><i class="icon">&#xf0cb;</i></li>
+                <li data-k="increaseListLevel"><i class="icon">&#xf148;</i></li>
+                <li data-k="decreaseListLevel"><i class="icon">&#xf149;</i></li>
+                <li data-k="code"><i class="icon">&#xf121;</i></li>
+                <li data-k="mathjax"><i class="icon">&#xf12b;</i></li>
+                <li data-k="makeLink" class="prompt"><i class="icon">&#xe820;</i></li>
+                <li data-k="insertImage"><i class="icon">&#xe80d;</i></li>
+                <li data-k="setHTML"><i class="icon">&#xf0f6;</i></li>
+                <li data-k="insertAudio"><i class="icon">&#xf1C7;</i></li>
+                <li data-k="removeAllFormatting"><i class="icon">&#xf112;</i></li>
+                <li data-k="undo"><i class="icon">&#xe866;</i></li>
+                <li data-k="redo"><i class="icon">&#xe865;</i></li>
+            </ul>
+        </div>
+        <div id="text-editor" class="text-editor" contenteditable="true"><p class="paragraph"><span class="colour" style="color:#000"><span class="size" style="font-size: 16px"></span></span><br></p></div>
+        <div class="font-box prompt-box hide">
+            <div>设置字体</div>
+            <div><span>大小</span>
+                <select class="font-size-selector">
+                    <option value="12px">12</option>
+                    <option value="13px">13</option>
+                    <option value="14px">14</option>
+                    <option value="15px" selected="selected">15</option>
+                    <option value="16px">16</option>
+                    <option value="17px">17</option>
+                    <option value="18px">18</option>
+                    <option value="19px">19</option>
+                    <option value="20px">20</option>
+                </select>
+            </div>
+            <div><span>字形</span>
+                <select class="font-face-selector">
+                    <option value="Arial">Arial</option>                    
+                    <option value="Helvetica">Helvetica</option>
+                    <option value="sans-serif">sans-serif</option>
+                    <option value="Tahoma">Tahoma</option>
+                    <option value="SimSun">宋体</option>
+                    <option value="FangSong_GB2312">仿宋</option>
+                    <option value="SimHei">黑体</option>
+                    <option value="Microsoft Yahei">微软雅黑</option>
+                    <option value="Microsoft JHengHei">微软正黑</option>
+                    <option value="KaiTi">楷体</option>
+                </select>
+            </div>
+            <div><button id="submitFontSetting">提交</button></div>
+        </div>
+        <div class="color-box prompt-box hide">
+            <div style="background-color:#000" data-v="#000"></div>
+            <div style="background-color:#111" data-v="#111"></div>
+            <div style="background-color:#222" data-v="#222"></div>
+            <div style="background-color:#333" data-v="#333"></div>
+            <div style="background-color:#444" data-v="#444"></div>
+            <div style="background-color:#555" data-v="#555"></div>
+            <div style="background-color:#666" data-v="#666"></div>
+            <div style="background-color:#777" data-v="#777"></div>
+            <div style="background-color:#888" data-v="#888"></div>
+            <div style="background-color:#999" data-v="#999"></div>
+            <div style="background-color:#bbb" data-v="#bbb"></div>
+            <div style="background-color:#ccc" data-v="#ccc"></div>
+            <div style="background-color:#eee" data-v="#eee"></div>
+            <div style="background-color:#fff" data-v="#fff"></div>
+            <div style="background-color:yellow" data-v="yellow"></div>
+            <div style="background-color:orange" data-v="orange"></div>
+            <div style="background-color:#FF8C00" data-v="#FF8C00"></div>
+            <div style="background-color:#FF6347" data-v="#FF6347"></div>
+            <div style="background-color:red" data-v="red"></div>
+            <div style="background-color:pink" data-v="pink"></div>
+            <div style="background-color:violet" data-v="violet"></div>
+            <div style="background-color:#7FFF00" data-v="#7FFF00"></div>
+            <div style="background-color:#7CFC00" data-v="#7CFC00"></div>
+            <div style="background-color:green" data-v="green"></div>
+            <div style="background-color:#7FFFD4" data-v="#7FFFD4"></div>
+            <div style="background-color:#00FFFF" data-v="#00FFFF"></div>
+            <div style="background-color:#00BFFF" data-v="#00BFFF"></div>
+            <div style="background-color:blue" data-v="blue"></div>
+            <div style="background-color:#9400D3" data-v="#9400D3"></div>
+        </div>
+        <div class="link-box prompt-box hide">
+            <div>设置链接</div>
+            <div><span>地址</span><input type="text"/></div>
+            <div><button id="submitUrl">提交</button></div>
+        </div>
+        <div class="image-box prompt-box hide">
+            <div>插入图像</div>
+            <div><label class="ui-upload">选择文件...<input type="file" accept="image/*" style="display: none;"/></label></div>
+            <div>未选择文件</div>
+            <div><button id="submitImage">提交</button></div>
+        </div>
+        <div class="text-box prompt-box hide">
+            <div>插入文本</div>
+            <div>
+                <label class="ui-upload">选择文件...<input type="file" style="display: none;"/></label>
+            </div>
+            <div>未选择文件</div>
+            <div class="hide">编码
+                <select>
+                    <option value="utf-8" selected="selected">utf-8</option>
+                    <option value="gb2312">gb2312</option>
+                </select>
+            </div>
+            <div class="hide"><input name="setType" type="radio" value="recover" checked="checked"/>覆盖<input name="setType" type="radio" value="append"/>追加</div>
+            <div><button id="submitText">提交</button></div>
+        </div>
+        <div class="header-box prompt-box hide">
+            <div data-v="h1">h1</div>
+            <div data-v="h2">h2</div>
+            <div data-v="h3">h3</div>
+        </div>
+        <div class="audio-box prompt-box hide">
+            <div>插入音频</div>
+            <div><label class="ui-upload">选择文件...<input type="file" accept="audio/*"  style="display: none;"/></label></div>
+            <div>未选择文件</div>
+            <div><button id="submitAudio">提交</button></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,73 @@
+<script type="text/javascript" src="/webapp/script/view/issue.js"></script>
+<div id="issue-view" class="section_content_box hide">
+    <div id="issue-tab-view" class="section-content-tab"> 
+        <div class="tab-back-view hide"><a class="tab-back-trigger icon-btn"><span class="icon-chevron-left-l"></span></a></div>
+        <div class="tab-title-view center-text"><label class="tab-title-text"></label></div>
+        <a class="tab-add-trigger plus icon-btn"><span class="icon-plus-l"></span></a>
+        <a class="tab-ok-trigger hide"><i class="icon">&#xe813;</i></a>
+        <a class="tab-more-trigger k-line hide"><span class="line"></span><span class="line"></span><span class="line"></span></a>
+        <div class="tab-more-btns hide"><div><a class="export-trigger"><i class="icon">&#xe830;</i><span>导出</span></a></div><div><a class="edit-trigger"><i class="icon">&#xe832;</i><span>编辑</span></a></div></div>
+    </div>
+    <div id="issue-content-view" class="section_content">
+        <div>
+            <div id="issue-info-view" class="section_content_item left_content">
+                <div id="issue-list-view" class="issue-list">
+                    <section class="issue-item-template">			
+                        <header>
+                            <h3 class="issue-title"><a class="issue-item-textTrigger"></a></h3><a class="issue-edit-trigger icon" title="编辑问题">&#xe832;</a>
+                            <div class="issue-docTotal-view top_count_view"><a class="issue-docTotal-Btn" title="文档列表"><span class="num">0</span><span class="text icon">&#xf0f6;</span></a></div>
+                            <div class="issue-tagItem-view tag_view">
+                                <ul class="issue-tagItem-list"><li class="tag_icon hide"><a class="icon">&#xe828;</a></li><li><a></a></li><li class="tag_icon hide"><a class="icon">&#xe827;</a></li></ul>
+                            </div>
+                        </header>
+                        <div class="issue-doc-view hide" title="最新文档"></div>
+                        <div class="issue-bottom-view">
+                            <span class="issue-time-view"><span class="icon-clock-s"></span><span class="issue-display-timeText"></span></span>
+                            <a class="issue-status-tag icon" data-v="0">&#xf128;</a>
+                            <span class="issue-docBtn-view"><a class="issue-delete-trigger icon" title="删除问题">&#xe83B;</a></span>	
+                        </div>	
+                    </section>
+                    <div class="issue-display-emptyItem tip_item"><i class="icon">&#xf128;</i><h3>未发现专题</h3></div>
+                </div>
+                <div id="issue-pageBar-view" class="paging hide">
+                    <ul>
+                        <li class="page-head-container page-turning-pre hide"><a class="page-head-trigger">首页</a><a class="page-pre-trigger">上页</a></li>
+                        <li class="page-num-container page-num"></li>
+                        <li class="page-tail-container page-turning-next hide"><a class="page-next-trigger">下页</a><a class="page-tail-trigger">尾页</a></li>
+                        <li class="page-total-view">共<span class="page-totalItem-text">0</span>项&nbsp;&nbsp;共<span class="page-totalPage-text">0</span>页</li>
+                        <li class="page-jump"><span>到<input class="page-jumpTo-inputNum"/>页</span></li>
+                        <li><a class="page-jumpTo-submit">翻页</a></li>
+                    </ul>					
+                </div>
+                <div id="issue-edit-view" class="issue-edit-view hide">
+                    <div><span> 专题描述</span><textarea class="issue-edit-textarea"></textarea></div>
+                    <div class="tag-item-view"><span>一级标签</span><ul class="issue-edit-topCls delete-style"></ul></div>
+                    <div class="tag-item-view"><span>二级标签</span><ul class="issue-edit-subClsList delete-style"></ul></div>
+                    <div><span><a class="issue-edit-cancelTrigger">取消</a><a class="issue-edit-submitTrigger">提交</a></span></div>
+                </div>
+            </div>
+            <div id="issue-dimensions-view" class="section_content_tag right_content">
+                <div class="issue-search-view hide">
+                    <input type="text" class="issue-search-input" placeholder="搜索专题..."/>
+                </div>
+                <div class="issue-condition-view hide">
+                    <div><h4>查询</h4><a class="triggerBtn">显示</a></div>
+                    <div class="time-calendar-view date-time">
+                        <ul class="dateTime-display-list"><li>起始<input type="date"/></li><li>截止<input type="date"/></li></ul>
+                    </div>
+                    <div class="time_select" style="padding-bottom:2px"><ul class="time-select-list"><li><input type="radio" name="time" value="0" checked><span>创建日期</span></li><li><input type="radio" name="time" value="1"><span>结束日期</span></li></ul></div>
+                    <div class="status_select" style="padding-bottom:2px"><ul class="status-select-list"><li><input type="radio" name="status" value="-1" checked><span>全部</span></li><li><input type="radio" name="status" value="0"><span>未处理</span></li><li><input type="radio" name="status" value="1"><span>处理中</span></li><li><input type="radio" name="status" value="2"><span>已处理</span></li></ul></div>
+                    <div class="tag_content"><ul class="cls-select-list delete-style"><li class="all-class" data-id="all">所有类别</li><li data-id="all"><a></a><a class="class_delete_btn icon-btn"><span class="icon-delete-s"></span></a></li></ul></div>
+                </div>
+                <div class="freqCls-classify-view hide">
+                    <div><h4>常用标签</h4><a class="class-view-trigger icon">&#xe827;</a><span class="count-common"></span><span class="freqCls-select-check">多选<input type="checkbox"></span></div>
+                    <div class="tag_content"><ul class="freqCls-display-list"></ul></div>
+                </div>
+                <div class="topCls-classify-view">
+                    <div><h4>标签</h4><a class="class-view-trigger icon">&#xe828;</a><span class="count-top-tag"></span><span class="topCls-select-check hide">多选<input type="checkbox"></span></div>
+                    <div class="tag_content"><ul class="topCls-display-list"><li><div class="empty-class-tip"><i class="icon">&#xe827;</i><h3>未发现类别</h3></div></li></ul></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

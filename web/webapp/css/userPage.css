@@ -1,0 +1,58 @@
+body{
+	background-color:#F2F2F2;/*#e9edf0;*/
+}
+.user_head{	
+	width:100%;
+	height:100px;
+	display: block;	
+	font-size:14px;
+	margin-top:60px;
+}
+.user_head > div{
+	position:relative;
+	float:left;
+	height:100%;
+}
+.user_head > div:first-child{	
+	width:100px;
+}
+.user_head > div > img{	
+	position:absolute;
+	width:86px;
+	height:86px;
+	border-radius:50%;
+	top:3px;
+	background:#FFFFFF;
+	cursor:pointer;
+}
+.user_head > div:last-child{
+	width:calc(100% - 100px);
+}
+.user_head > div:last-child > div{
+	width:100%;
+	height:28%;
+}
+.user_head > div:last-child > div > h2{
+	margin:0;	
+	padding:0;
+	border:none;
+}
+.user_head > div:last-child > div > span{	
+	color:#000000;
+}
+.user_head > div:last-child > div:nth-child(2) > span{
+	padding:0 9px;
+	background:#FFFFFF;
+	border-radius:9px;
+	float:left;
+	vertical-align: text-bottom;
+}
+.user_head > div:last-child > div > span ~ span{
+	margin-left:10px;
+}
+.user_head > div:last-child > div:last-child > span{
+	margin-top:5px;
+}
+.user-content-suspend-top{
+	top:50px;
+}

@@ -1,0 +1,257 @@
+<html>
+<head>
+<link type="text/css" href="/conception/css/userEqualSection.css" rel="stylesheet" />
+<script type="text/javascript">
+	(function(){
+		var components = new Array();
+		components.push({
+			baseInfo : document.getElementById('userBaseInfo'),
+			contactInfo : document.getElementById('userContactInfo'),
+			educateInfo : document.getElementById('userEducateInfo'),
+			knowledgeInfo : document.getElementById('userKnowledgeInfo'),
+			motto : document.getElementById('userMotto')
+		});
+		components.push(function(boxObj){
+			for(var i=1;i<boxObj.children.length;i++){
+				var textSpan = boxObj.children[i].children[0].children[1];
+				var nodeName = "";
+				switch(boxObj.id){
+					case 'userBaseInfo':
+						nodeName = i === 2 ? 'SELECT' : 'INPUT';
+						break;
+					case 'userKnowledgeInfo':
+						nodeName = 'TEXTAREA';
+						break;
+					case 'userMotto':
+						nodeName = 'TEXTAREA';
+						break;
+					default:
+						nodeName = 'INPUT';									
+				}
+				var newInput = document.createElement(nodeName); 
+				if(nodeName === 'SELECT'){
+					newInput.appendChild(document.createElement('OPTION'));
+					newInput.appendChild(document.createElement('OPTION'));
+					newInput.children[0].value = '0';
+					newInput.children[0].text = "男";
+					newInput.children[1].value = '1';						
+					newInput.children[1].text = "女";
+				}
+				else{
+					newInput.value = textSpan.innerText;
+				}
+				components[5].push(textSpan.innerText);
+				textSpan.innerText = "";
+				textSpan.appendChild(newInput);	
+			}
+		});
+		components.push(function(boxObj,updateFlag){
+			for(var i=1;i<boxObj.children.length;i++){
+				var textSpan = boxObj.children[i].children[0].children[1];
+				if(updateFlag){
+					textSpan.innerText = textSpan.children[0].nodeName === 'SELECT' ? textSpan.children[0].options[0].text : textSpan.children[0].value;
+					var updateTextObj = null;
+					switch(boxObj.id){
+						case 'userBaseInfo':
+							if(i === 1){
+								updateTextObj = components[7]["alias"];
+							}
+							else if(i === 2){
+								updateTextObj = components[7]["gender"];
+							}
+							break;
+						case 'userMotto':
+							updateTextObj = components[7]["motto"];
+							break;
+					}
+					if(updateTextObj !== null){
+						updateTextObj.innerText = textSpan.innerText;
+					}
+					components[5].shift();
+				}
+				else{
+					textSpan.innerText = components[5].shift();	
+				}								
+			}
+		});
+		components.push(function(boxObj){
+			var items = new Array();
+			switch(boxObj.id){
+				case 'userBaseInfo':
+					items = ["alias","gender","age"];
+					break;
+				case 'userContactInfo':
+					items = ["telephone","email","address"];
+					break;
+				case 'userEducateInfo':
+					items = ["degree","school","major"];
+					break;
+				case 'userKnowledgeInfo':
+					items = ["profession","interests","focus"];
+					break;
+				case 'userMotto':
+					items = ["motto"];
+					break;
+			}
+			return items;
+		});
+		components.push(function(loadData){
+			for(var i in components[0]){
+				var items = components[3](components[0][i]);
+				var nowBoxObj = components[0][i];
+				for(var j=0;j<items.length;j++){
+					var setData = loadData[items[j]];					
+					var textSpan = nowBoxObj.children[j+1].children[0].children[1];
+					textSpan.innerText = setData ? setData : "";
+				}
+				nowBoxObj.children[0].children[0].children[1].children[0].addEventListener("click",function(){
+					if(addClass(this.parentNode,"hide") === 1){
+						removeClass(this.parentNode.parentNode.children[2],"hide");
+						components[1](this.parentNode.parentNode.parentNode.parentNode);						
+					}					
+				},false);
+				nowBoxObj.children[0].children[0].children[2].children[0].addEventListener("click",function(){
+					if(addClass(this.parentNode,"hide") === 1){
+						removeClass(this.parentNode.parentNode.children[1],"hide");
+						components[2](this.parentNode.parentNode.parentNode.parentNode,false);
+					}
+				},false);
+				nowBoxObj.children[0].children[0].children[2].children[1].addEventListener("click",function(){
+					if(addClass(this.parentNode,"hide") === 1){
+						removeClass(this.parentNode.parentNode.children[1],"hide");
+						var boxObj = this.parentNode.parentNode.parentNode.parentNode;
+						var items = components[3](boxObj);
+						var countEdit = 0;
+						var infoType = boxObj.id === 'userBaseInfo' || boxObj.id === 'userContactInfo' || boxObj.id === 'userMotto' ? 0 : 1;	
+						var getEditData = '{"set":[{';
+						for(var i=1;i<boxObj.children.length;i++){
+							var textSpan = boxObj.children[i].children[0].children[1];
+							var textValue = "";
+							var inputValue = "";
+							if(textSpan.children[0].nodeName === 'SELECT'){
+								inputValue = textSpan.children[0].options[0].value;
+								textValue = trim(textSpan.children[0].options[0].text);
+							}
+							else{
+								textValue = trim(textSpan.children[0].value);
+								inputValue = items[i-1] === "age" ? textValue : '"'+textValue+'"';
+							}
+							if(components[5][i-1] !== textValue){
+								if(countEdit > 0){
+									getEditData += ',';
+								}
+								getEditData += '"'+items[i-1]+'"'+':'+inputValue;	
+								countEdit++;
+							}
+						}						
+						if(countEdit > 0){
+							getEditData += '}]}';							
+							requestServer("POST","/conception/controllers/my_actions/MyInfoAction.php/setUserInfo/"+infoType,getEditData,function(resText){
+								resText ? components[2](boxObj,true) : alert("set info wrong");
+							});
+						}
+						else{
+							components[2](boxObj,false);
+						}
+					}
+				},false);
+			}
+		});
+		
+		components.push(new Array());
+		components.push(new BaseComponent());
+		var app = new BaseComponent();
+		
+		app.getComponentCount = function(){
+			return components.length;
+		};
+		
+		app.registerComponent = function(component){
+			if(typeof component == "object"){
+				components.push(component);
+			}
+		};
+		
+		app.loadData = function(loadData){
+			components[4](loadData);
+		};
+		
+		return app;
+	})();
+</script>
+</head>
+<body>
+<div>
+<div class="user_equal_section">
+	<div id="userBaseInfo">
+		<div>
+			<div><span>基本信息</span><span><a>编辑</a></span><span class="hide"><a>取消</a><a>保存</a></span></div>	
+		</div>
+		<div>
+			<div><span>昵称</span><span></span></div>
+		</div>
+		<div>
+			<div><span>性别</span><span></span></div>
+		</div>
+		<div>
+			<div><span>年龄</span><span></span></div>
+		</div>
+	</div>
+	<div id="userContactInfo">
+		<div>
+			<div><span>联系方式</span><span><a>编辑</a></span><span class="hide"><a>取消</a><a>保存</a></span></div>	
+		</div>
+		<div>
+			<div><span>电话</span><span></span></div>
+		</div>
+		<div>
+			<div><span>邮箱</span><span></span></div>
+		</div>
+		<div>
+			<div><span>地址</span><span></span></div>
+		</div>
+	</div>
+</div>
+<div class="user_equal_section">
+	<div id="userEducateInfo">
+		<div>
+			<div><span>学业信息</span><span><a>编辑</a></span><span class="hide"><a>取消</a><a>保存</a></span></div>	
+		</div>
+		<div>
+			<div><span>学历</span><span></span></div>
+		</div>
+		<div>
+			<div><span>院校</span><span></span></div>
+		</div>
+		<div>
+			<div><span>专业</span><span></span></div>
+		</div>
+	</div>
+	<div id="userKnowledgeInfo"><!-- html标签id写错位置，写在内级div中导致js出现undefined提示;2017.11.11.16:06 -->
+		<div>
+			<div><span>知识领域</span><span><a>编辑</a></span><span class="hide"><a>取消</a><a>保存</a></span></div>
+		</div>
+		<div>
+			<div><span>专业</span><span></span></div>
+		</div>
+		<div>
+			<div><span>兴趣</span><span></span></div>
+		</div>
+		<div>
+			<div><span>关注</span><span></span></div>
+		</div>
+	</div>
+</div>
+<div class="user_equal_section">
+	<div id="userMotto">
+		<div>
+			<div><span>座右铭</span><span><a>编辑</a></span><span class="hide"><a>取消</a><a>保存</a></span></div>	
+		</div>
+		<div>
+			<div><span>格言</span><span></span></div>
+		</div>
+	</div>
+</div>
+</div>
+</body>
+</html>

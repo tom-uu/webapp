@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>注册成功提醒</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+    .box{
+        width: 300px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: -180px 0 0 -80px;
+    }
+</style>
+<script type="text/javascript">
+    window.onload = function(){
+        var mesNode = document.getElementById("message");
+        var i = 5;
+        var intervalid;
+        mesNode.innerText = i;
+        intervalid = setInterval(function(){
+            if (i === 0) {
+                window.location.href = "/webapp/sign.php";
+                clearInterval(intervalid);
+            }
+            document.getElementById("mes").innerHTML = i;
+            i--;
+        }, 1000);
+    };
+</script>
+</head>
+<body>
+    <div class="box">
+        <div>注册成功</div><br/>
+        <div><span id="message"></span>秒后跳转到登陆页面</div><br/>
+        <a href="/webapp/index.php">点击跳转到登陆页面</a>
+    </div>
+</body>
+</html>

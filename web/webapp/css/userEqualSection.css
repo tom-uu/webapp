@@ -1,0 +1,57 @@
+.section_content > div > .user_equal_section > div > div:first-child{
+	position:relative;
+	border-bottom:1px solid #666666;
+	z-index:0;/*给该div加上参照的z-index可避免父元素的背景影响该div内容的背景;2017.12.5.18:07*/
+}
+.section_content > div > .user_equal_section{
+	position: relative;
+	width:100%;
+	overflow:hidden;
+}
+.section_content > div > .user_equal_section > div{
+	position: relative;
+	float:left;
+	width:calc(50% - 10px);
+}
+.section_content > div > .user_equal_section > div > div:first-child > div > span+span{
+	float:right;
+}
+.section_content > div > .user_equal_section > div > div > div:first-child > span+span > a:last-child{
+	margin-left:20px;
+}
+.section_content > div > .user_equal_section > div > div+div{
+	border-bottom:1px solid #D0D0D0;
+}
+.section_content > div > .user_equal_section > div > div > div > span+span{
+	position: relative;
+	margin-left:20px;	
+}
+.section_content > div > .user_equal_section > div > div+div > div{
+	margin:0;
+	width:100%;
+}
+.section_content > div > .user_equal_section > div > div+div > div > span{
+	float:left;
+}
+.section_content > div > .user_equal_section > div > div+div > div > span+span > textarea{
+	min-width:220px;
+}
+@media(max-width:767px){
+	.section_content > div > .user_equal_section > div{
+		width:100%;
+	}
+	.section_content > div > .user_equal_section > div > div+div > div > span+span > textarea{
+		height:55px;
+	}	
+}
+@media (min-width:768px){
+	.section_content > div > .user_equal_section > div{
+		width:calc(50% - 8px);
+	}
+	.section_content > div > .user_equal_section > div:first-child{
+		margin-right:16px;
+	}
+	.section_content > div > .user_equal_section > div > div+div > div > span+span > textarea{
+		width:250px;
+	}
+}

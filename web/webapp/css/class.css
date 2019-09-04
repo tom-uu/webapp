@@ -1,0 +1,355 @@
+#class-view > div.path-view > div{
+    min-height:520px;
+}
+#class-view > div.common-group-view > div{
+    min-height:260px; 
+}
+#class-view > div.path-view > div > div.path-head-view{
+    padding-bottom: 7px;
+    margin-bottom: 8px;
+    overflow: hidden;
+    border-bottom: 1px dotted #999;
+}
+#class-view > div.common-group-view > div > div.common-group-head > span.common-group-title > span,
+#class-view > div.path-view > div > div.path-head-view > span.catalogue-title > span{
+    font-size: 12px;
+    margin-left: 12px;
+    color:#777;
+}
+#class-view > div.common-group-view > div > div.common-group-head > span.common-group-title > .icon,
+#class-view > div.path-view > div > div.path-head-view > span.catalogue-title > .icon{
+    margin-left: 5px;
+}
+#class-view > div.common-group-view > div > div.common-group-head > a,
+#class-view > div.path-view > div > div.path-head-view > a{
+    float:right;
+    color:#666;
+}
+#class-view > div.common-group-view > div > div.common-group-head > a{
+    right:-2px;
+}
+#class-view > div.path-view > div > div.path-head-view > a{
+    right:8px;
+}
+#class-view > div.common-group-view > div > div.common-group-head > a.arrange-trigger,
+#class-view > div.path-view > div > div.path-head-view > a.arrange-trigger{
+    position: relative;
+    top:0;
+    right:40px;
+}
+#class-view > div.common-group-view > div > div.common-group-head > button,
+#class-view > div.path-view > div > div.path-head-view > button{
+    padding: 3px;
+    margin-left: 8px;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    font-size: 13px;
+    cursor: pointer;
+    float: right;
+}
+#class-view > div.common-group-view > div > div.common-group-head > button:hover,
+#class-view > div.path-view > div > div.path-head-view > button:hover{
+    background-color: #f8f8f8;
+}
+#class-view > div.path-view > div > div.path-list-view{
+    padding-bottom: 7px;
+    margin-bottom: 8px;
+    height:calc(100% - 30px);
+}
+#class-view > div.path-view > div > div.path-list-view,
+#class-view > div.common-group-view > div > div.common-group-list{
+    max-height:465px;
+    overflow-y:auto;
+    -webkit-overflow-scrolling: touch;  
+}
+#class-view > div.common-group-view > div > div.common-group-list > ul,
+#class-view > div.path-view > div > div.path-list-view > ul{
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    float:left;
+}
+#class-view > div.path-view > div > div.path-list-view > ul,
+#class-view > div.common-group-view > div > div.common-group-list > ul{
+    width: 100%;
+}
+#class-view > div.path-view > div > div.path-list-view::-webkit-scrollbar,
+#class-view > div.common-group-view > div > div.common-group-list::-webkit-scrollbar{
+    display: none;
+}
+#class-view > div.common-group-view > div > div.common-group-list > ul > li,
+#class-view > div.path-view > div > div.path-list-view > ul > li{
+    position: relative;
+    color: #555;
+    cursor: default;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+#class-view > div.common-group-view > div > div.common-group-list > ul > li > div > .icon,
+#class-view > div.path-view > div > div.path-list-view > ul > li > div > .icon{
+    position: relative;
+    display: inline-block;   
+    font-size:40px;
+    width:58px;
+    height:37px;
+    color:#777;
+    cursor: default;
+}
+#class-view > div.common-group-view > div > div.common-group-list > ul > li > div.sub-count,
+#class-view > div.path-view > div > div.path-list-view > ul > li > div.sub-count{
+    font-size:12px;
+    color:#777;
+}
+#class-view > div.common-group-view > div > div.common-group-list > ul > li > div:first-child:hover,
+#class-view > div.path-view > div > div.path-list-view > ul > li > div:first-child:hover{
+    color:#222;
+}
+#class-view > div.path-view > div > div.path-list-view > ul > li > div:first-child:hover > .icon,
+#class-view > div.common-group-view > div > div.common-group-list > ul > li > div:first-child:hover > .icon{
+    color:#444;
+}
+#class-view > div.path-view > div > div.path-list-view > ul > li > div:first-child:hover > .b-icon_type_folder:after{
+    background: linear-gradient(to right,#f3f3f3,#c6c6c6);
+}
+#class-view > div.path-view > div > div.path-list-view > ul > li > div.context-menu,
+#class-view > div.common-group-view > div > div.common-group-list > ul > li > div.context-menu{
+    position: absolute;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    z-index:1;
+}
+#class-view > div.common-group-view > div > div.common-group-list > ul > li > div.context-menu,
+#class-view > div.path-view > div > div.path-list-view > ul > li > div.context-menu{
+    min-width: 80px;
+    text-align:left;
+}
+#class-view > div.path-view > div > div.path-list-view > ul > li > div.context-menu > div,
+#class-view > div.common-group-view > div > div.common-group-list > ul > li > div.context-menu > div{
+    padding:2px 12px 3px 12px;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+}
+#class-view > div.path-view > div > div.path-list-view > ul > li > div.context-menu > div:last-child,
+#class-view > div.common-group-view > div > div.common-group-list > ul > li > div.context-menu > div:last-child{
+    border-bottom: 0;
+}
+#class-view > div.path-view > div > div.path-list-view > ul > li > div.context-menu > div:hover,
+#class-view > div.common-group-view > div > div.common-group-list > ul > li > div.context-menu > div:hover{
+    background: #a1a1a1;
+}
+#class-view > div.common-group-view > div > div.common-group-head > div.add-view,
+#class-view > div.common-group-view > div > div.common-group-head > div.edit-view,
+#class-view > div.path-view > div > div.path-head-view > div.edit-view{
+    float:right;
+    margin-right: 5px;
+}
+#class-view > div.common-group-view > div > div.common-group-head > div.add-view,
+#class-view > div.common-group-view > div > div.common-group-head > div.edit-view{
+    margin-top: 0;
+}
+#class-view > div.common-group-view > div > div.common-group-head > div.add-view > a,
+#class-view > div.common-group-view > div > div.common-group-head > div.edit-view > a{
+    border:0;
+}
+#class-view > div.common-group-view > div > div.common-group-head > div.add-view > a+a,
+#class-view > div.common-group-view > div > div.common-group-head > div.edit-view > a+a,
+#class-view > div.path-view > div > div.path-head-view > div.edit-view > a+a{
+    margin-left: 20px;
+}
+#class-view > div.common-group-view > div > div.common-group-head > div.group-tip,
+#class-view > div.path-view > div > div.path-head-view > div.catalogue-tip{
+    display: inline-block;
+    padding-left:7px;
+}
+#class-view > div.common-group-view > div > div.common-group-head > div.group-tip > span > span,
+#class-view > div.path-view > div > div.path-head-view > div.catalogue-tip > span > span{
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    white-space: nowrap;
+    vertical-align: top;
+}
+#class-view > div.path-view > div > div.path-head-view > div.catalogue-tip > span > .icon{
+    margin-left:6px;
+    margin-right:5px;
+}
+#class-view > div.common-group-view > div > div.common-group-head > div.group-tip > span:last-child,
+#class-view > div.path-view > div > div.path-head-view > div.catalogue-tip > span:last-child{
+    margin-left:10px;
+    font-size:12px;
+    color:#777;
+}
+#class-view > div.common-group-view > div > div.common-group-head > div.group-tip > a.icon-btn,
+#class-view > div.path-view > div > div.path-head-view > div.catalogue-tip > a.icon-btn{
+    position: relative;
+    top:-1px;
+}
+@media (min-width:768px){
+    #class-view > div.path-view > div > div.path-list-view > ul{
+        min-height:450px;
+    }
+    #class-view > div.common-group-view > div > div.common-group-list > ul{
+        min-height:203px;
+    }
+    #class-view > div.path-view > div > div.path-list-view > ul > li > div > .icon{
+        top: 10px;
+        margin-bottom: 10px;
+    }
+    #class-view > div.common-group-view > div > div.common-group-list > ul > li,
+    #class-view > div.path-view > div > div.path-list-view > ul > li{
+        width:80px;
+        margin: 7px;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+    }
+    #class-view > div.common-group-view > div > div.common-group-list > ul > li > div > div+div,
+    #class-view > div.path-view > div > div.path-list-view > ul > li > div > div+div{
+        max-width: 100px;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        cursor: default;
+    }
+    #class-view > div.common-group-view > div > div.common-group-list > ul > li > div > .icon{
+        top:10px;
+        margin-bottom: 10px;
+    }
+    #class-view > div.common-group-view > div > div.common-group-list > ul > li > div.sub-count > input,
+    #class-view > div.path-view > div > div.path-list-view > ul > li > div.sub-count > input{
+        position: relative;
+        display: inherit;
+        margin: 5px 0;
+        left: calc(50% - 7px);
+    }
+    #class-view > div.common-group-view > div > div.common-group-list > ul.add-list{
+        width: 100%;
+    }
+    #class-view > div.common-group-view > div > div.common-group-list > ul.add-list > li{
+        width:100%;
+        margin:0;
+        border-bottom: 1px solid #efefef;
+        text-align: left;
+        padding: 16px 0 0 0;
+    }
+    #class-view > div.common-group-view > div > div.common-group-list > ul.add-list > li:first-child{
+        padding-top:4px !important;
+    }
+    #class-view > div.common-group-view > div > div.common-group-list > ul.add-list > li:last-child{
+        border-bottom: 0;
+    }
+    #class-view > div.common-group-view > div > div.common-group-list > ul.add-list > li+li{
+        padding-top:8px !important;
+    }
+    #class-view > div.common-group-view > div > div.common-group-list > ul.add-list > li div{
+        display: inline-block;
+    }
+    #class-view > div.common-group-view > div > div.common-group-list > ul.add-list > li > div > .icon{
+        height:49px;
+        top:9px;
+        margin-bottom: 0;
+    }
+    #class-view > div.common-group-view > div > div.common-group-list > ul.add-list > li > div.sub-count{
+        position: absolute;
+        top: 19px;
+        right: 3px;
+    }
+    #class-view > div.common-group-view > div > div.common-group-list > ul.add-list > li > div.sub-count > input{
+        position: relative;
+        float: right;
+        margin-left: 15px;
+        left:0;
+    }
+    #class-view > div.common-group-view > div > div.common-group-list > ul.add-list > li > div > div+div{
+        position: absolute;
+        top:19px;
+        margin-left: 10px;
+        max-width: 100px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow:ellipsis;
+    }
+    #class-view > div.common-group-view > div > div.common-group-list > ul.add-list > li:first-child > div > div+div,
+    #class-view > div.common-group-view > div > div.common-group-list > ul.add-list > li:first-child > div.sub-count{
+        top:16px;
+    }
+}
+@media (max-width:767px){
+    #class-view > div.common-group-view > div > div.common-group-list > ul,
+    #class-view > div.path-view > div > div.path-list-view > ul{
+        width: 100%;
+    }
+    #class-view > div.common-group-view > div > div.common-group-list > ul > li,
+    #class-view > div.path-view > div > div.path-list-view > ul > li{
+        margin:0;
+        border-bottom: 1px solid #efefef;
+    }
+    #class-view > div.path-view > div > div.path-list-view > ul > li:first-child{
+        padding-top: 0;
+    }
+    #class-view > div.path-view > div > div.path-list-view > ul.folder > li:first-child{
+        padding-top: 1px;
+    }
+    #class-view > div.path-view > div > div.path-list-view > ul.folder > li{
+        padding: 14px 0 6px 2px;
+    }
+    #class-view > div.common-group-view > div > div.common-group-list > ul > li:first-child{
+        padding-top:4px !important;
+    }
+    #class-view > div.common-group-view > div > div.common-group-list > ul > li:last-child,
+    #class-view > div.path-view > div > div.path-list-view > ul > li:last-child{
+        border-bottom: 0;
+    }
+    #class-view > div.common-group-view > div > div.common-group-list > ul > li{
+        padding: 16px 0 0 0;
+    }
+    #class-view > div.path-view > div > div.path-list-view > ul > li+li,
+    #class-view > div.common-group-view > div > div.common-group-list > ul > li+li{
+        padding-top:8px !important;
+    }
+    #class-view > div.path-view > div > div.path-list-view > ul > li > div > .icon{
+        margin-bottom: 0;
+    }
+    #class-view > div.common-group-view > div > div.common-group-list > ul > li div,
+    #class-view > div.path-view > div > div.path-list-view > ul > li div{
+        display: inline-block;
+    }
+    #class-view > div.common-group-view > div > div.common-group-list > ul > li > div > .icon,
+    #class-view > div.path-view > div > div.path-list-view > ul > li > div > .icon{
+        height:49px;
+        top:9px;
+    }
+    #class-view > div.common-group-view > div > div.common-group-list > ul > li > div.sub-count,
+    #class-view > div.path-view > div > div.path-list-view > ul > li > div.sub-count{
+        position: absolute;
+        top: 19px;
+        right: 3px;
+    }
+    #class-view > div.common-group-view > div > div.common-group-list > ul > li > div.sub-count > input,
+    #class-view > div.path-view > div > div.path-list-view > ul > li > div.sub-count > input{
+        position: relative;
+        float: right;
+        margin-left: 15px;
+        top: 2px;
+    }
+    #class-view > div.common-group-view > div > div.common-group-list > ul > li > div > div+div,
+    #class-view > div.path-view > div > div.path-list-view > ul > li > div > div+div{
+        position: absolute;
+        top:19px;
+        margin-left: 10px;
+        max-width: 100px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow:ellipsis;
+    }
+    #class-view > div.path-view > div > div.path-list-view > ul > li:first-child > div > div+div,
+    #class-view > div.path-view > div > div.path-list-view > ul > li:first-child > div.sub-count{
+        top:12px;
+    }
+    #class-view > div.common-group-view > div > div.common-group-list > ul > li:first-child > div > div+div,
+    #class-view > div.common-group-view > div > div.common-group-list > ul > li:first-child > div.sub-count{
+        top:16px;
+    }
+}

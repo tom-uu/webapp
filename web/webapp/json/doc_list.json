@@ -1,0 +1,12 @@
+{
+    "language": "javascript",
+    "views": {
+        "show": {
+            "map": "function (doc) {var texts=doc.texts,text='',limitLen=220,strLen=0,startIndex=doc.title ? 1 : 0,title=startIndex>0 ? (function(){var thisTitle=texts[0];limitLen-=thisTitle.length;return thisTitle;})() : '0',valueJson = {};for(var i=startIndex,len=texts.length;i<len;i++){var thisText=texts[i];var thisLen=strLen+thisText.length;if(thisLen <= limitLen){text += thisText;strLen=thisLen;}else if(strLen < limitLen){var cutLen=limitLen-strLen+1;text += thisText.substring(0,cutLen);strLen += cutLen;}else{break;}}valueJson = {\"rev\":doc._rev,\"title\":title,\"text\":doc.textLen>limitLen ? text+'......' : text};if(doc.hasOwnProperty(\"_attachments\")){var countAudio = 0;for(var attName in doc._attachments){var attInfo = doc._attachments[attName];if(attInfo.content_type.search(\"audio\") !== -1){countAudio++;}}if(countAudio > 0){valueJson.countAudio = countAudio;}}emit(doc._id,valueJson);}"
+        }
+    },"lists": {
+        "docSummary": "function (doc,req) {var row = getRow();if (!row){return 'no ingredients'}var data= new Array();data.push({\"id\":row.id,\"value\":row.value});while(row=getRow()){data.push({\"id\":row.id,\"value\":row.value});}return JSON.stringify(data);}"
+    },"shows": {
+        "attachInfo": "function (doc,req){return JSON.stringify(doc._attachments);}"
+    }
+}

@@ -1,0 +1,301 @@
+#issue-top-view > section > header > div.issue-info-view > ul > li{
+    margin: 0 8px 0 0;
+}
+#issue-top-view > section > header > div.issue-info-view > ul > li.tag_icon{
+    margin-left:3px;
+}
+#issue-docs-view > div > div.docs-list-view{
+    overflow: hidden;
+    color: #555;
+}
+#issue-docs-view > div > div.docs-list-view.check-style > div{
+    width:calc(100% - 32px);
+    overflow: visible;
+}
+#issue-docs-view > div > div.docs-list-view > div{
+    position: relative;
+    height:auto;
+    padding:10px;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+#issue-docs-view > div > div.docs-list-view > div:hover{
+    color:#333;
+}
+#issue-docs-view > div > div.docs-list-view > div > h3{
+    margin-bottom: 5px;
+}
+#issue-docs-view > div > div.docs-list-view > div > p{
+    font-size:1rem;
+    word-wrap: break-word;
+}
+#issue-docs-view > div > div.docs-list-view > div > p:last-child{
+    font-size:13px;
+    margin-top:10px;
+    text-align:right;
+}
+#issue-docs-view > div > div.docs-list-view > div > p:last-child > span:first-child.icon{
+    float:left;
+    font-size: 16px;
+    margin-right: 15px;
+}
+#issue-docs-view > div > div.docs-list-view > div > p:last-child > span.audio-tip{
+    margin-right: 24px;
+    font-size:15px;
+}
+#issue-docs-view > div > div.docs-list-view > div > p:last-child > span:last-child{
+    margin-left:5px;
+}
+#issue-docs-view > div > div.docs-list-view > div > p:last-child > span:first-child.num{
+    float:left;
+    color:#000;
+}
+#issue-docs-view > div > div.docs-list-view > div > input{
+    position: absolute;
+    right: -27px;
+    top:calc(50% - 7px);
+    margin:0;
+}
+#issue-top-view > section > header > div.issue-bottom-view{
+    overflow:hidden;
+    clear:both;
+}
+#issue-top-view > section > header{
+    padding:5px 5px 0;
+}
+#issue-top-view > section > header > div{
+    margin:5px 12px 5px 0;
+    color: #666;
+}
+#issue-top-view > section > header > div,
+#issue-top-view ul.issue-info-list{
+    margin-right:0;
+}
+#issue-docs-view > div > div.docs-list-view > div + div{
+    margin-top: 10px;
+}
+#issue-top-view > section > header > div.issue-bottom-view,
+#issue-top-view > div.order-view{
+    position: relative;
+    line-height: 29px;
+}
+#issue-top-view > section > header > div.issue-bottom-view > div,
+#issue-top-view > div.order-view > div{
+    float:right;
+}
+#issue-top-view > div.order-view{
+    margin-bottom:0;
+    padding:6px 5px 0 5px;
+    overflow:hidden;
+    border-top:1px solid #ccc;
+}
+#issue-top-view > div.order-view > a,
+#issue-top-view > div.order-view > span{
+    float:left;
+}
+#issue-top-view > div.order-view > span.order-name-text{
+    color:#666;
+}
+#issue-top-view > div.order-view > span.order-name-text > span.icon{
+    margin:0 7px 0 0;
+}
+#issue-top-view > div.order-view > span.order-name-text > span.icon+span{
+    margin-left: 0;
+}
+#issue-top-view > div.order-view > span.order-name-text > span:last-child{
+    font-weight:600;
+}
+#issue-top-view > div.order-view > span{
+    margin-left:15px;
+}
+#issue-top-view > div.order-view > span+span{
+    clear:both;
+    margin-left:0;
+    font-size:13px;
+    color:#666;
+}
+#issue-top-view > div.order-view > span+span > span:first-child{
+    margin-left:0;
+}
+#issue-top-view > div.order-view > span+span > span:last-child{
+    margin-left:5px;
+}
+#issue-top-view > div.order-view > span > span{
+    margin-left:10px;
+}
+#issue-top-view > section > header > div.issue-bottom-view > div button,
+#issue-top-view > div.order-view > div button{
+    padding: 3px;
+    margin-left:8px;
+    border: 1px solid #e0e0e0;
+    background-color:#fff;
+    font-size:13px;
+    cursor: pointer;
+}
+#issue-top-view > section > header > div.issue-bottom-view > div button:hover{
+    background-color: #f8f8f8;
+}
+#issue-top-view > div.order-view > div > span.rm-doc-btns-view,
+#issue-top-view > section > header > div.issue-bottom-view > div > span.rm-doc-btns-view{
+    font-size:13px;
+}
+#issue-top-view > div.order-view > div > span.rm-doc-btns-view > input,
+#issue-top-view > section > header > div.issue-bottom-view > div > span.rm-doc-btns-view > input{
+    position: relative;
+    top: 3px;
+    margin:0 0 0 20px;
+}
+#issue-top-view > div.order-view > div > span.rm-doc-btns-view > a,
+#issue-top-view > section > header > div.issue-bottom-view > div > span.rm-doc-btns-view > a{
+    margin-left: 20px;
+}
+#issue-top-view > section > header > div.issue-bottom-view > div > span.rm-doc-btns-view > a.cancel-rm-btn{
+    padding:3px;
+    border: 1px solid #e0e0e0;
+}
+#issue-top-view > section > header > div.issue-bottom-view > .issue-time-view{
+    float:left;
+    display:block;
+    font-size: 13px;
+}
+#issue-top-view > section > header > div.issue-bottom-view > .issue-time-view:first-child{
+    margin-right:20px;
+}
+#issue-top-view > section > header > div.issue-bottom-view > .issue-time-view > .issue-display-timeText{
+    margin-left:5px;
+}
+#issue-docs-view > div.section_content_tag > div.doc-order-view > div > a.plus{
+    top:0;
+    right:0;
+}
+#issue-docs-view > div.section_content_tag > div.doc-order-view > div.tag_content{
+    max-height: 380px;
+    overflow-y: auto;
+}
+#issue-docs-view > div.section_content_tag > div.doc-order-view > div.tag_content::-webkit-scrollbar{
+    display: none;
+}
+#issue-docs-view > div.section_content_tag > div.doc-order-view > div > ul.order-list > li{
+    clear: both;
+    width:100%;
+    margin:5px 0;
+    border-bottom: 1px dotted #999;
+    padding-bottom: 4px;
+}
+#issue-docs-view > div.section_content_tag > div.doc-order-view > div > ul.order-list > li:last-child{
+    padding-bottom: 0;
+    border-bottom: 0;
+    margin-bottom: 0;
+}
+#issue-docs-view > div.section_content_tag > div.doc-order-view > div > ul.order-list > li > a{
+    float:left;
+    color:#555;
+}
+#issue-docs-view > div.section_content_tag > div.doc-order-view > div > ul.order-list > li > a:hover{
+    color: #000;
+}
+#issue-docs-view > div.section_content_tag > div.doc-order-view > div > ul.order-list > li > a:first-child{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    display: block;
+    padding: 2px;
+    background-color: #f6f6f6;
+}
+#issue-docs-view > div.section_content_tag > div.doc-order-view > div > ul.order-list > li > a:first-child > span{
+    position:relative;
+    text-align: center;
+    font-size: 13px;
+}
+#issue-docs-view > div.section_content_tag > div.doc-order-view > div > ul.order-list > li > a:first-child > span.num{
+    top:-3px;
+    height: 20px;
+    display: block;
+}
+#issue-docs-view > div.section_content_tag > div.doc-order-view > div > ul.order-list > li > a:first-child > span.text{
+    top:-5px;
+}
+#issue-docs-view > div.section_content_tag > div.doc-order-view > div > ul.order-list > li > div{
+    width: calc(100% - 49px);
+    float:left;
+    margin-left: 5px;
+}
+#issue-docs-view > div.section_content_tag > div.doc-order-view > div > ul.order-list > li > div .icon{
+    font-size:13px;
+}
+#issue-docs-view > div.section_content_tag > div.doc-order-view > div > ul.order-list > li > div.name-view > a.order-name{
+    display:block;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    padding-left:3px;
+}
+#issue-docs-view > div.section_content_tag > div.doc-order-view > div > ul.order-list > li > div.name-view > a.order-name.onSelect,
+#issue-docs-view > div.section_content_tag > div.doc-order-view > div > ul.order-list > li > div.name-view > a.order-name:hover{
+    background-color: #f3f3f3;
+}
+#issue-docs-view > div.section_content_tag > div.doc-order-view > div > ul.order-list > li > div.trigger-view > a.edit-trigger{
+    float:right;
+}
+#issue-docs-view > div.section_content_tag > div.doc-order-view > div > ul.order-list > li.marked > div.trigger-view > a.icon:first-child{
+    margin-left:7px;
+}
+#issue-docs-view > div.section_content_tag > div.doc-order-view > div > ul.setCollect > li.marked{
+    display:none;
+}
+#issue-docs-view > div.section_content_tag > div.doc-order-view > div > ul.order-list > li > div.trigger-view > input{
+    position: relative;
+    float: right;
+    display: none;
+    margin-bottom: 6px;
+}
+#issue-docs-view > div.section_content_tag > div.doc-order-view > div > a.delete-trigger{
+    position: absolute;
+    top: -1px;
+    right: 40px;
+    font-size: 13px;
+}
+#issue-docs-view > div.section_content_tag > div.doc-order-view > div > a.collect-trigger{
+    position: absolute;
+    top: -1px;
+    right: 78px;
+    font-size: 13px;
+}
+#issue-docs-view > div.section_content_tag > div.doc-order-view > div > span.collect-btns-view,
+#issue-docs-view > div.section_content_tag > div.doc-order-view > div > span.delete-btns-view{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 13px;
+}
+#issue-docs-view > div.section_content_tag > div.doc-order-view > div > span.collect-btns-view > a+a,
+#issue-docs-view > div.section_content_tag > div.doc-order-view > div > span.delete-btns-view > a+a{
+    margin-left: 25px;
+}
+#issue-docs-view > div.section_content_tag > div.doc-order-view > div > span.collect-btns-view > input,
+#issue-docs-view > div.section_content_tag > div.doc-order-view > div > span.delete-btns-view > input{
+    position: relative;
+    top: 3px;
+    margin-left: 20px;
+}
+#issue-docs-view > div.section_content_tag > div.doc-order-view > div > ul.order-list.on-check > li > div.trigger-view > input{
+    display: inherit;
+}
+#issue-docs-view > div.section_content_tag > div.doc-order-view > div > ul.order-list.on-check > li > div.trigger-view > a.edit-trigger{
+    display:none;
+}
+#issue-docs-view > div.order-view > div{
+    margin:0;
+}
+@media (max-width:767px){
+    #issue-docs-view > div > div.docs-list-view > div.touch-remove{
+        position:relative;
+        right:-20px;
+    }
+    #issue-docs-view > div > div.docs-list-view > div.touch-remove > span{
+        position:absolute;
+        left:-30px;
+        top:calc(50% - 16px);
+    }
+}
+
